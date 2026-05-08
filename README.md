@@ -1,2 +1,3 @@
-# opencode-cases
-Landing page for case studies
+# Кейсы
+
+Стартовая страница для разработки раздела с кейсами.
