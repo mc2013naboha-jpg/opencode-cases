@@ -3,53 +3,49 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Кейсы</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      font-family: Inter, "Segoe UI", Arial, sans-serif;
-      background: #111217;
-      color: #f5f2ec;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      min-height: 100vh;
-      margin: 0;
-      display: grid;
-      place-items: center;
-      padding: 32px;
-      background:
-        radial-gradient(circle at 20% 20%, rgba(240, 168, 84, 0.28), transparent 30%),
-        radial-gradient(circle at 80% 70%, rgba(119, 91, 255, 0.25), transparent 34%),
-        #111217;
-    }
-
-    main {
-      width: min(720px, 100%);
-      padding: clamp(32px, 8vw, 72px);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: 32px;
-      background: rgba(255, 255, 255, 0.07);
-      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
-      backdrop-filter: blur(18px);
-      text-align: center;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(40px, 8vw, 84px);
-      line-height: 0.98;
-      letter-spacing: -0.06em;
-    }
-  </style>
+  <title>WorkHere</title>
+  <meta name="description" content="Стартовая страница WorkHere ATS.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main>
-    <h1>Я готов к работе, Аня</h1>
+<div class="page" id="top">
+  <div class="page__header">
+    <div class="container">
+      <header class="header">
+        <a class="logo" href="index.html" aria-label="WorkHere">
+          <span class="logo__mark" aria-hidden="true">*</span>
+          <span>WorkHere</span>
+        </a>
+        <div class="header__nav">
+          <nav class="nav" aria-label="Основная навигация">
+            <a class="nav__link" href="#features">Возможности</a>
+            <a class="nav__link" href="#business">Для бизнеса</a>
+            <a class="nav__link" href="cases.html">Кейсы</a>
+            <a class="nav__link" href="#reviews">Отзывы</a>
+            <a class="nav__link" href="#security">Безопасность</a>
+          </nav>
+        </div>
+        <div class="header__actions">
+          <a class="header__login" href="#">Войти</a>
+          <div class="header__button">
+            <a class="button button--primary" href="cases.html#demo-request">Оставить заявку на демо</a>
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <main class="home-preview">
+    <section class="home-preview__panel" aria-labelledby="home-title">
+      <p class="cases-hero__eyebrow">WorkHere ATS</p>
+      <h1 class="cases-hero__title" id="home-title">Страница для работы над кейсами</h1>
+      <p class="cases-hero__lead">Основная разработка вынесена на отдельную страницу в стиле текущего сайта. Из навигации можно перейти в раздел «Кейсы».</p>
+      <a class="button button--primary" href="cases.html">Открыть страницу кейсов</a>
+    </section>
   </main>
+</div>
 </body>
 </html>
