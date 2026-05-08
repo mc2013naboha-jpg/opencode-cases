@@ -472,6 +472,7 @@ button {
 }
 
 .cases-page__nav,
+.cases-page__voice,
 .cases-page__case,
 .cases-page__cta,
 .home-preview {
@@ -611,6 +612,152 @@ button {
 .case-card--soon .case-card__status {
   background: var(--color-white);
   color: rgba(16, 21, 37, 0.48);
+}
+
+.client-voice {
+  padding: 56px;
+  border-radius: 60px;
+  background: var(--color-sky);
+  box-shadow: var(--shadow-soft);
+}
+
+.client-voice__head {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(340px, 0.65fr);
+  gap: 32px;
+  align-items: end;
+  margin-bottom: 28px;
+}
+
+.client-voice__title {
+  max-width: 740px;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 52px;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.client-voice__lead {
+  margin: 0;
+  color: #111827;
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 1.42;
+}
+
+.client-voice__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 20px;
+}
+
+.client-quote {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  padding: 34px;
+  border-radius: 36px;
+  background: var(--color-white);
+  box-shadow: var(--shadow-card);
+}
+
+.client-quote::before {
+  content: "“";
+  position: absolute;
+  top: 92px;
+  right: 30px;
+  color: rgba(24, 144, 255, 0.14);
+  font-family: var(--font-display);
+  font-size: 164px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.client-quote .case-card__logo {
+  max-width: 230px;
+  min-height: 82px;
+  margin-bottom: 34px;
+}
+
+.client-quote .case-card__logo--haval span {
+  font-size: 40px;
+}
+
+.client-quote p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+}
+
+.client-quote footer {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 5px;
+  margin-top: 32px;
+  color: var(--color-muted);
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.client-quote footer strong {
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.client-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.client-point {
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 24px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(16, 21, 37, 0.08);
+}
+
+.client-point span {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--color-green);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.client-point h3 {
+  margin: auto 0 0;
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.client-point p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 15px;
+  line-height: 1.42;
 }
 
 .case-detail {
@@ -946,6 +1093,8 @@ button {
   }
 
   .cases-hero,
+  .client-voice__head,
+  .client-voice__grid,
   .case-detail__intro,
   .case-change__box,
   .cta-panel {
@@ -961,6 +1110,7 @@ button {
   }
 
   .case-detail__columns,
+  .client-points,
   .metrics-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -982,6 +1132,7 @@ button {
 
   .cases-page__hero,
   .cases-page__nav,
+  .cases-page__voice,
   .cases-page__case,
   .cases-page__cta,
   .home-preview,
@@ -991,6 +1142,7 @@ button {
   }
 
   .case-nav,
+  .client-voice,
   .case-detail__intro,
   .case-detail__columns,
   .case-results,
@@ -1002,6 +1154,7 @@ button {
   }
 
   .case-detail,
+  .client-voice,
   .cases-hero__visual {
     border-radius: 32px;
   }
@@ -1028,6 +1181,7 @@ button {
   }
 
   .cases-page__nav,
+  .cases-page__voice,
   .cases-page__case,
   .cases-page__cta,
   .home-preview {
@@ -1042,6 +1196,7 @@ button {
   .cases-hero__lead,
   .section-lead,
   .case-detail__lead,
+  .client-voice__lead,
   .case-change__text,
   .cta-panel__text {
     font-size: 16px;
@@ -1075,6 +1230,7 @@ button {
   }
 
   .case-nav,
+  .client-voice,
   .case-detail__intro,
   .case-detail__columns,
   .case-results,
@@ -1086,12 +1242,14 @@ button {
   }
 
   .case-nav__head,
+  .client-voice__head,
   .case-results__head,
   .footer__inner {
     display: grid;
   }
 
   .case-nav__title,
+  .client-voice__title,
   .case-results__title,
   .case-change__title,
   .cta-panel__title,
@@ -1100,6 +1258,8 @@ button {
   }
 
   .case-nav__grid,
+  .client-voice__grid,
+  .client-points,
   .case-detail__columns,
   .metrics-grid {
     grid-template-columns: 1fr;
@@ -1107,6 +1267,26 @@ button {
 
   .case-card {
     min-height: 220px;
+  }
+
+  .client-quote,
+  .client-point {
+    padding: 22px;
+    border-radius: 24px;
+  }
+
+  .client-quote p {
+    font-size: 23px;
+  }
+
+  .client-quote::before {
+    top: 82px;
+    right: 18px;
+    font-size: 104px;
+  }
+
+  .client-point {
+    min-height: 180px;
   }
 
   .case-block {
