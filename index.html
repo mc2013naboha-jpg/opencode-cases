@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кейсы</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      background: #111217;
+      color: #f5f2ec;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 32px;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(240, 168, 84, 0.28), transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(119, 91, 255, 0.25), transparent 34%),
+        #111217;
+    }
+
+    main {
+      width: min(720px, 100%);
+      padding: clamp(32px, 8vw, 72px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 32px;
+      background: rgba(255, 255, 255, 0.07);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(18px);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(40px, 8vw, 84px);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Я готов к работе, Аня</h1>
+  </main>
+</body>
+</html>
