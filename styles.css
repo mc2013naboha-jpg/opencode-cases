@@ -582,6 +582,51 @@ button {
   letter-spacing: 0.08em;
 }
 
+.case-card__logo--cdek {
+  position: relative;
+  gap: 8px;
+  background: var(--color-white);
+  border: 1px solid rgba(16, 21, 37, 0.08);
+}
+
+.case-card__logo--cdek::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 6px;
+  left: 50%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 25%, #b5ef3e 0, #64c528 45%, #159b3b 100%);
+  transform: translateX(-50%);
+}
+
+.case-card__logo-orbit {
+  position: absolute;
+  z-index: 1;
+  width: 48px;
+  height: 18px;
+  top: 25px;
+  left: 50%;
+  border-radius: 100% 0 100% 0;
+  background: var(--color-white);
+  transform: translateX(-50%) rotate(-18deg) skewX(-18deg);
+}
+
+.case-card__logo-word {
+  position: relative;
+  z-index: 2;
+  margin-top: 42px;
+  color: #22252a;
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1;
+  letter-spacing: -0.11em;
+  transform: skewX(-12deg) scaleX(1.12);
+}
+
 .case-card__name {
   margin: 0;
   font-family: var(--font-display);
@@ -652,6 +697,10 @@ button {
   gap: 20px;
 }
 
+.client-voice__grid--quotes {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .client-quote {
   position: relative;
   min-height: 100%;
@@ -696,6 +745,10 @@ button {
   letter-spacing: -0.035em;
 }
 
+.client-voice__grid--quotes .client-quote p {
+  font-size: 25px;
+}
+
 .client-quote footer {
   position: relative;
   z-index: 1;
@@ -718,6 +771,11 @@ button {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
+}
+
+.client-points--wide {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 20px;
 }
 
 .client-point {
@@ -754,6 +812,58 @@ button {
 }
 
 .client-point p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 15px;
+  line-height: 1.42;
+}
+
+.case-solution {
+  padding: 0 64px 64px;
+}
+
+.case-solution__box {
+  padding: 40px;
+  border-radius: 40px;
+  background: var(--color-violet);
+}
+
+.case-solution__title {
+  max-width: 620px;
+  margin: 0 0 24px;
+  font-family: var(--font-display);
+  font-size: 42px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.case-solution__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.case-solution__item {
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 24px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(16, 21, 37, 0.08);
+}
+
+.case-solution__item h4 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.case-solution__item p {
   margin: 0;
   color: var(--color-muted);
   font-size: 15px;
@@ -911,6 +1021,10 @@ button {
   gap: 16px;
 }
 
+.metrics-grid--cdek {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .metric-card {
   min-height: 200px;
   display: flex;
@@ -935,6 +1049,10 @@ button {
   line-height: 0.95;
   letter-spacing: -0.06em;
   color: #6df9a5;
+}
+
+.metrics-grid--cdek .metric-card__value {
+  font-size: 48px;
 }
 
 .metric-card__text {
@@ -1111,6 +1229,7 @@ button {
 
   .case-detail__columns,
   .client-points,
+  .case-solution__grid,
   .metrics-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1145,6 +1264,7 @@ button {
   .client-voice,
   .case-detail__intro,
   .case-detail__columns,
+  .case-solution,
   .case-results,
   .case-change,
   .cta-panel,
@@ -1233,6 +1353,7 @@ button {
   .client-voice,
   .case-detail__intro,
   .case-detail__columns,
+  .case-solution,
   .case-results,
   .case-change,
   .cta-panel,
@@ -1260,6 +1381,7 @@ button {
   .case-nav__grid,
   .client-voice__grid,
   .client-points,
+  .case-solution__grid,
   .case-detail__columns,
   .metrics-grid {
     grid-template-columns: 1fr;
@@ -1270,7 +1392,9 @@ button {
   }
 
   .client-quote,
-  .client-point {
+  .client-point,
+  .case-solution__box,
+  .case-solution__item {
     padding: 22px;
     border-radius: 24px;
   }
@@ -1287,6 +1411,14 @@ button {
 
   .client-point {
     min-height: 180px;
+  }
+
+  .case-solution__title {
+    font-size: 30px;
+  }
+
+  .case-solution__item {
+    min-height: 170px;
   }
 
   .case-block {
