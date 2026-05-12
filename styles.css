@@ -467,6 +467,10 @@ button {
   max-height: 42px;
 }
 
+.cases-intro__case-logo.case-card__logo--radisson img {
+  max-height: 42px;
+}
+
 .cases-intro__case strong {
   display: block;
   font-size: 15px;
@@ -1142,6 +1146,18 @@ button {
   object-fit: contain;
 }
 
+.case-card__logo--radisson {
+  padding: 10px;
+  background: var(--color-white);
+  border: 1px solid rgba(16, 21, 37, 0.08);
+}
+
+.case-card__logo--radisson img {
+  width: 100%;
+  max-height: 54px;
+  object-fit: contain;
+}
+
 .case-card__name {
   margin: 0;
   font-family: var(--font-display);
@@ -1641,7 +1657,8 @@ button {
 }
 
 .metrics-grid--cdek,
-.metrics-grid--miuz {
+.metrics-grid--miuz,
+.metrics-grid--radisson {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
@@ -1731,7 +1748,8 @@ button {
 }
 
 .metrics-grid--cdek .metric-card__value,
-.metrics-grid--miuz .metric-card__value {
+.metrics-grid--miuz .metric-card__value,
+.metrics-grid--radisson .metric-card__value {
   font-size: 48px;
 }
 
