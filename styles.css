@@ -1725,6 +1725,12 @@ button {
   padding: 46px 52px;
 }
 
+.case-change--apps .case-change__box {
+  grid-template-columns: minmax(400px, 0.82fr) minmax(0, 1fr);
+  align-items: start;
+  padding: 46px 52px;
+}
+
 .case-change__content {
   min-width: 0;
   display: grid;
@@ -1795,6 +1801,44 @@ button {
   padding: 12px;
   border-radius: 50%;
   background: rgba(255, 255, 236, 0.82);
+}
+
+.case-change__apps {
+  position: relative;
+  width: min(100%, 440px);
+  min-height: 250px;
+}
+
+.app-icon {
+  position: absolute;
+  display: block;
+  object-fit: contain;
+  border-radius: 16px;
+  filter: drop-shadow(0 16px 26px rgba(42, 79, 124, 0.16));
+}
+
+.app-icon--outlook {
+  left: 18px;
+  top: 86px;
+  width: 150px;
+}
+
+.app-icon--google {
+  left: 190px;
+  top: 24px;
+  width: 82px;
+}
+
+.app-icon--yandex {
+  left: 304px;
+  top: 4px;
+  width: 138px;
+}
+
+.app-icon--mail {
+  left: 224px;
+  top: 156px;
+  width: 76px;
 }
 
 .cta-panel {
@@ -2017,7 +2061,8 @@ button {
   }
 
   .case-change--media .case-change__box,
-  .case-change--messengers .case-change__box {
+  .case-change--messengers .case-change__box,
+  .case-change--apps .case-change__box {
     grid-template-columns: 1fr;
   }
 
@@ -2402,7 +2447,8 @@ button {
   }
 
   .case-change--media .case-change__box,
-  .case-change--messengers .case-change__box {
+  .case-change--messengers .case-change__box,
+  .case-change--apps .case-change__box {
     padding: 22px;
   }
 
@@ -2442,6 +2488,39 @@ button {
     left: 156px;
     width: 72px;
     padding: 7px;
+  }
+
+  .case-change__apps {
+    width: 100%;
+    min-height: 200px;
+  }
+
+  .app-icon {
+    border-radius: 12px;
+  }
+
+  .app-icon--outlook {
+    left: 10px;
+    top: 78px;
+    width: 112px;
+  }
+
+  .app-icon--google {
+    left: 134px;
+    top: 24px;
+    width: 60px;
+  }
+
+  .app-icon--yandex {
+    left: 210px;
+    top: 10px;
+    width: 104px;
+  }
+
+  .app-icon--mail {
+    left: 158px;
+    top: 142px;
+    width: 58px;
   }
 
   .case-nav__grid,
