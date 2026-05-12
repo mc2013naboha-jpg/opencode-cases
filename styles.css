@@ -1406,8 +1406,11 @@ button {
 
 .case-results {
   padding: 64px;
-  background: var(--color-text);
-  color: var(--color-white);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(170, 242, 202, 0.42), transparent 28%),
+    radial-gradient(circle at 92% 6%, rgba(207, 232, 255, 0.78), transparent 30%),
+    linear-gradient(135deg, #f7fbff 0%, #fff8e8 100%);
+  color: var(--color-text);
 }
 
 .case-results__head {
@@ -1421,6 +1424,7 @@ button {
 .case-results__title {
   max-width: 760px;
   margin: 0;
+  color: var(--color-text);
   font-family: var(--font-display);
   font-size: 46px;
   line-height: 1;
@@ -1431,10 +1435,11 @@ button {
   flex: 0 0 auto;
   padding: 11px 16px;
   border-radius: 999px;
-  background: var(--color-yellow);
+  background: #ffd982;
   color: var(--color-text);
   font-family: var(--font-display);
   font-weight: 700;
+  box-shadow: 0 12px 34px rgba(255, 180, 72, 0.22);
 }
 
 .metrics-grid {
@@ -1454,13 +1459,33 @@ button {
   justify-content: space-between;
   padding: 24px;
   border-radius: 28px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(16, 21, 37, 0.08);
+  box-shadow: 0 18px 48px rgba(42, 79, 124, 0.1);
 }
 
-.metric-card:nth-child(2),
+.metric-card:nth-child(1) {
+  background: rgba(207, 232, 255, 0.78);
+}
+
+.metric-card:nth-child(2) {
+  background: rgba(170, 242, 202, 0.72);
+}
+
+.metric-card:nth-child(3) {
+  background: rgba(255, 243, 216, 0.9);
+}
+
 .metric-card:nth-child(4) {
-  background: rgba(54, 195, 107, 0.2);
+  background: rgba(216, 251, 241, 0.78);
+}
+
+.metric-card:nth-child(5) {
+  background: rgba(255, 219, 160, 0.68);
+}
+
+.metric-card:nth-child(6) {
+  background: rgba(238, 231, 255, 0.78);
 }
 
 .metric-card__value {
@@ -1470,7 +1495,22 @@ button {
   font-weight: 800;
   line-height: 0.95;
   letter-spacing: -0.06em;
-  color: #6df9a5;
+  color: #1890ff;
+  text-shadow: 0 10px 28px rgba(24, 144, 255, 0.12);
+}
+
+.metric-card:nth-child(2) .metric-card__value,
+.metric-card:nth-child(4) .metric-card__value {
+  color: #237a48;
+}
+
+.metric-card:nth-child(3) .metric-card__value,
+.metric-card:nth-child(5) .metric-card__value {
+  color: #d47a19;
+}
+
+.metric-card:nth-child(6) .metric-card__value {
+  color: #765bd8;
 }
 
 .metrics-grid--cdek .metric-card__value {
@@ -1479,7 +1519,7 @@ button {
 
 .metric-card__text {
   margin: 20px 0 0;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(16, 21, 37, 0.72);
   line-height: 1.38;
 }
 
