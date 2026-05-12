@@ -1802,6 +1802,10 @@ button {
   padding: 46px 52px;
 }
 
+.case-change--funnels .case-change__content {
+  align-content: start;
+}
+
 .case-change__content {
   min-width: 0;
   display: grid;
@@ -1835,6 +1839,10 @@ button {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
   max-width: 640px;
+}
+
+.case-change--funnels .case-funnels {
+  max-width: 100%;
 }
 
 .case-funnel {
