@@ -1719,6 +1719,12 @@ button {
   padding: 46px 52px;
 }
 
+.case-change--messengers .case-change__box {
+  grid-template-columns: minmax(360px, 0.78fr) minmax(0, 1fr);
+  align-items: start;
+  padding: 46px 52px;
+}
+
 .case-change__content {
   min-width: 0;
   display: grid;
@@ -1750,6 +1756,45 @@ button {
   border-radius: 18px;
   background: var(--color-white);
   box-shadow: 0 16px 40px rgba(42, 79, 124, 0.12);
+}
+
+.case-change__messengers {
+  position: relative;
+  width: min(100%, 420px);
+  min-height: 270px;
+}
+
+.messenger-icon {
+  position: absolute;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 26px rgba(42, 79, 124, 0.16));
+}
+
+.messenger-icon--tg {
+  top: 18px;
+  left: 50px;
+  width: 104px;
+}
+
+.messenger-icon--viber {
+  top: 96px;
+  left: 178px;
+  width: 58px;
+}
+
+.messenger-icon--wa {
+  top: 145px;
+  left: 104px;
+  width: 74px;
+}
+
+.messenger-icon--max {
+  top: 122px;
+  left: 258px;
+  width: 116px;
+  padding: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 236, 0.82);
 }
 
 .cta-panel {
@@ -1971,7 +2016,8 @@ button {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .case-change--media .case-change__box {
+  .case-change--media .case-change__box,
+  .case-change--messengers .case-change__box {
     grid-template-columns: 1fr;
   }
 
@@ -2355,7 +2401,8 @@ button {
     font-size: 30px;
   }
 
-  .case-change--media .case-change__box {
+  .case-change--media .case-change__box,
+  .case-change--messengers .case-change__box {
     padding: 22px;
   }
 
@@ -2365,6 +2412,36 @@ button {
 
   .case-change__image {
     border-radius: 14px;
+  }
+
+  .case-change__messengers {
+    width: 100%;
+    min-height: 178px;
+  }
+
+  .messenger-icon--tg {
+    top: 8px;
+    left: 20px;
+    width: 72px;
+  }
+
+  .messenger-icon--viber {
+    top: 60px;
+    left: 108px;
+    width: 38px;
+  }
+
+  .messenger-icon--wa {
+    top: 98px;
+    left: 58px;
+    width: 54px;
+  }
+
+  .messenger-icon--max {
+    top: 78px;
+    left: 156px;
+    width: 72px;
+    padding: 7px;
   }
 
   .case-nav__grid,
