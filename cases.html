@@ -147,80 +147,86 @@
             <div>
               <h2 class="client-voice__title" id="client-voice-title">Что о нас говорят клиенты</h2>
             </div>
-            <p class="client-voice__lead">Фрагменты отзывов клиентов о внедрении WorkHere: без громких обещаний, только то, что команды отметили в реальной работе.</p>
+            <p class="client-voice__lead">Фрагменты рекомендательных писем клиентов о внедрении WorkHere. Скоро добавим фотографии экспертов и сканы писем.</p>
           </div>
 
-          <div class="client-voice__grid client-voice__grid--quotes">
-            <blockquote class="client-quote">
-              <span class="case-card__logo case-card__logo--haval" aria-label="Логотип Haval">
-                <span>HAVAL</span>
-              </span>
-              <p>«Использование WorkHere позволило нам значительно улучшить качество подбора персонала и сократить время закрытия вакансий, что критически важно для нашего бизнеса».</p>
-              <footer>
-                <strong>Дарья Пинская</strong>
-                <span>Руководитель группы подбора персонала</span>
-                <span>ООО «Хавейл Мотор Мануфэкчуринг Рус»</span>
-              </footer>
-            </blockquote>
+          <div class="client-carousel" data-client-carousel>
+            <button class="client-carousel__arrow client-carousel__arrow--prev" type="button" aria-label="Предыдущий отзыв" data-carousel-prev></button>
 
-            <blockquote class="client-quote">
-              <span class="case-card__logo case-card__logo--cdek" aria-label="Логотип СДЭК">
-                <span class="case-card__logo-orbit" aria-hidden="true"></span>
-                <span class="case-card__logo-word">CDEK</span>
-              </span>
-              <p>«С применением WorkHere мы улучшили управляемость процесса подбора и сократили время на закрытие вакансий. Рекомендуем WorkHere компаниям, которым важно системно выстроить найм, ускорить обработку откликов и повысить прозрачность воронки подбора».</p>
-              <footer>
-                <strong>Токарева О.С.</strong>
-                <span>Директор</span>
-                <span>ООО «СДЭК-СЛУЖБА ДОСТАВКИ ЭКСПРЕСС КУРЬЕР»</span>
-              </footer>
-            </blockquote>
+            <div class="client-carousel__viewport">
+              <article class="client-slide is-active" data-carousel-slide>
+                <div class="client-slide__person">
+                  <div class="client-slide__photo">Место для фото эксперта</div>
+                  <div class="client-slide__meta">
+                    <strong>Дарья Пинская</strong>
+                    <span>Руководитель группы подбора персонала</span>
+                    <span>ООО «Хавейл Мотор Мануфэкчуринг Рус»</span>
+                  </div>
+                  <blockquote>«Использование WorkHere позволило нам значительно улучшить качество подбора персонала и сократить время закрытия вакансий, что критически важно для нашего бизнеса».</blockquote>
+                </div>
+                <div class="client-slide__letter" aria-label="Место для рекомендательного письма Haval">
+                  <div class="client-letter client-letter--placeholder">
+                    <span class="case-card__logo case-card__logo--haval" aria-label="Логотип Haval">
+                      <span>HAVAL</span>
+                    </span>
+                    <strong>Скриншот рекомендательного письма</strong>
+                    <span>Haval</span>
+                  </div>
+                </div>
+              </article>
 
-            <blockquote class="client-quote">
-              <span class="case-card__logo case-card__logo--pivaldi" aria-label="Логотип Pivaldi">
-                <span class="pivaldi-logo__word">PIVALDI</span>
-                <span class="pivaldi-logo__ornament" aria-hidden="true"></span>
-              </span>
-              <p>«WorkHere — для нас это инструмент, который упрощает и систематизирует весь процесс работы на всех этапах. Рекомендуем WorkHere, так как она значительно упрощает и ускоряет работу».</p>
-              <footer>
-                <strong>Надежда Суворова</strong>
-                <span>Директор по персоналу</span>
-                <span>ООО «Пивальди»</span>
-              </footer>
-            </blockquote>
-          </div>
+              <article class="client-slide" data-carousel-slide hidden>
+                <div class="client-slide__person">
+                  <div class="client-slide__photo">Место для фото эксперта</div>
+                  <div class="client-slide__meta">
+                    <strong>Токарева О.С.</strong>
+                    <span>Директор</span>
+                    <span>ООО «СДЭК-СЛУЖБА ДОСТАВКИ ЭКСПРЕСС КУРЬЕР»</span>
+                  </div>
+                  <blockquote>«С применением WorkHere мы улучшили управляемость процесса подбора и сократили время на закрытие вакансий. Рекомендуем WorkHere компаниям, которым важно системно выстроить найм, ускорить обработку откликов и повысить прозрачность воронки подбора».</blockquote>
+                </div>
+                <div class="client-slide__letter" aria-label="Место для рекомендательного письма СДЭК">
+                  <div class="client-letter client-letter--placeholder">
+                    <span class="case-card__logo case-card__logo--cdek" aria-label="Логотип СДЭК">
+                      <span class="case-card__logo-orbit" aria-hidden="true"></span>
+                      <span class="case-card__logo-word">CDEK</span>
+                    </span>
+                    <strong>Скриншот рекомендательного письма</strong>
+                    <span>СДЭК</span>
+                  </div>
+                </div>
+              </article>
 
-          <div class="client-points client-points--wide" aria-label="Что клиенты отмечают в работе с WorkHere">
-            <article class="client-point">
-              <span>01</span>
-              <h3>Удобный интерфейс</h3>
-              <p>Команды быстрее адаптируются к системе и начинают работать без долгого обучения.</p>
-            </article>
-            <article class="client-point">
-              <span>02</span>
-              <h3>Автоматизация процессов</h3>
-              <p>Рутинные действия, статусы, напоминания и шаблоны перестают отнимать время рекрутеров.</p>
-            </article>
-            <article class="client-point">
-              <span>03</span>
-              <h3>Аналитика и отчеты</h3>
-              <p>HR-команды видят вакансии, этапы, конверсию, причины отказов и динамику найма.</p>
-            </article>
-            <article class="client-point">
-              <span>04</span>
-              <h3>Интеграции</h3>
-              <p>Отклики и резюме из внешних источников попадают в единый контур без ручного переноса.</p>
-            </article>
-            <article class="client-point">
-              <span>05</span>
-              <h3>ИИ-поиск</h3>
-              <p>Интеллектуальный поиск помогает быстрее находить релевантных кандидатов внутри базы.</p>
-            </article>
-            <article class="client-point">
-              <span>06</span>
-              <h3>Коммуникации</h3>
-              <p>Max, WhatsApp, Telegram, Viber, внутренний чат и единая история взаимодействий помогают не терять кандидатов и договоренности.</p>
-            </article>
+              <article class="client-slide" data-carousel-slide hidden>
+                <div class="client-slide__person">
+                  <div class="client-slide__photo">Место для фото эксперта</div>
+                  <div class="client-slide__meta">
+                    <strong>Надежда Суворова</strong>
+                    <span>Директор по персоналу</span>
+                    <span>ООО «Пивальди»</span>
+                  </div>
+                  <blockquote>«WorkHere — для нас это инструмент, который упрощает и систематизирует весь процесс работы на всех этапах. Рекомендуем WorkHere, так как она значительно упрощает и ускоряет работу».</blockquote>
+                </div>
+                <div class="client-slide__letter" aria-label="Место для рекомендательного письма Pivaldi">
+                  <div class="client-letter client-letter--placeholder">
+                    <span class="case-card__logo case-card__logo--pivaldi" aria-label="Логотип Pivaldi">
+                      <span class="pivaldi-logo__word">PIVALDI</span>
+                      <span class="pivaldi-logo__ornament" aria-hidden="true"></span>
+                    </span>
+                    <strong>Скриншот рекомендательного письма</strong>
+                    <span>Pivaldi</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <button class="client-carousel__arrow client-carousel__arrow--next" type="button" aria-label="Следующий отзыв" data-carousel-next></button>
+
+            <div class="client-carousel__dots" aria-label="Навигация по отзывам">
+              <button class="is-active" type="button" aria-label="Показать отзыв Haval" data-carousel-dot></button>
+              <button type="button" aria-label="Показать отзыв СДЭК" data-carousel-dot></button>
+              <button type="button" aria-label="Показать отзыв Pivaldi" data-carousel-dot></button>
+            </div>
           </div>
         </div>
       </div>
@@ -594,6 +600,37 @@
   burger.addEventListener('click', () => setMenu(true));
   close.addEventListener('click', () => setMenu(false));
   links.forEach((link) => link.addEventListener('click', () => setMenu(false)));
+
+  const carousel = document.querySelector('[data-client-carousel]');
+
+  if (carousel) {
+    const slides = carousel.querySelectorAll('[data-carousel-slide]');
+    const dots = carousel.querySelectorAll('[data-carousel-dot]');
+    const prev = carousel.querySelector('[data-carousel-prev]');
+    const next = carousel.querySelector('[data-carousel-next]');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      currentSlide = (index + slides.length) % slides.length;
+
+      slides.forEach((slide, slideIndex) => {
+        const active = slideIndex === currentSlide;
+        slide.classList.toggle('is-active', active);
+        slide.hidden = !active;
+      });
+
+      dots.forEach((dot, dotIndex) => {
+        const active = dotIndex === currentSlide;
+        dot.classList.toggle('is-active', active);
+        dot.setAttribute('aria-current', active ? 'true' : 'false');
+      });
+    }
+
+    prev.addEventListener('click', () => showSlide(currentSlide - 1));
+    next.addEventListener('click', () => showSlide(currentSlide + 1));
+    dots.forEach((dot, dotIndex) => dot.addEventListener('click', () => showSlide(dotIndex)));
+    showSlide(0);
+  }
 </script>
 </body>
 </html>
