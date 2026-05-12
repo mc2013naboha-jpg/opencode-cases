@@ -450,14 +450,17 @@ button {
   font-size: 22px;
 }
 
-.cases-intro__case-logo .pivaldi-logo__mark {
-  width: 28px;
-  height: 28px;
-  font-size: 16px;
+.cases-intro__case-logo .pivaldi-logo__word {
+  font-size: 24px;
 }
 
-.cases-intro__case-logo .pivaldi-logo__word {
-  font-size: 18px;
+.cases-intro__case-logo .pivaldi-logo__ornament {
+  gap: 8px;
+}
+
+.cases-intro__case-logo .pivaldi-logo__ornament::before,
+.cases-intro__case-logo .pivaldi-logo__ornament::after {
+  width: 34px;
 }
 
 .cases-intro__case strong {
@@ -1061,44 +1064,66 @@ button {
 
 .case-card__logo--pivaldi {
   position: relative;
-  gap: 4px;
-  background: #ffe048;
-  border: 1px solid rgba(16, 21, 37, 0.12);
-  color: #111111;
+  gap: 10px;
+  background: #171717;
+  border: 1px solid rgba(177, 151, 108, 0.28);
+  color: #b79b6f;
 }
 
 .case-card__logo--pivaldi::before {
   content: "";
   position: absolute;
-  inset: 8px 20px 10px;
-  border: 2px solid rgba(17, 17, 17, 0.14);
-  border-radius: 42% 42% 48% 48% / 28% 28% 72% 72%;
+  inset: 0;
+  background: radial-gradient(circle at 50% 12%, rgba(255, 255, 255, 0.06), transparent 34%);
 }
 
-.pivaldi-logo__mark,
-.pivaldi-logo__word {
+.pivaldi-logo__word,
+.pivaldi-logo__ornament {
   position: relative;
   z-index: 1;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-display);
-  line-height: 1;
-}
-
-.pivaldi-logo__mark {
-  width: 34px;
-  height: 34px;
-  display: grid;
-  place-items: center;
-  border: 2px solid #111111;
-  border-radius: 50%;
-  font-size: 20px;
-  font-weight: 900;
 }
 
 .pivaldi-logo__word {
-  font-size: 24px;
+  color: #b79b6f;
+  font-size: 34px;
   font-weight: 900;
-  letter-spacing: -0.08em;
+  line-height: 0.9;
+  letter-spacing: 0.03em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.pivaldi-logo__ornament {
+  width: 100%;
+  height: 20px;
+  gap: 12px;
+  background:
+    radial-gradient(circle at 50% 50%, #b79b6f 0 3px, transparent 4px),
+    linear-gradient(35deg, transparent 46%, #9f865d 47% 53%, transparent 54%),
+    linear-gradient(-35deg, transparent 46%, #9f865d 47% 53%, transparent 54%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 18px, 22px 16px, 22px 16px;
+}
+
+.pivaldi-logo__ornament::before,
+.pivaldi-logo__ornament::after {
+  content: "";
+  width: 72px;
+  height: 4px;
+  border-radius: 999px;
+  background: #9f865d;
+}
+
+.pivaldi-logo__ornament {
+  color: #b79b6f;
+}
+
+.pivaldi-logo__ornament span {
+  display: none;
 }
 
 .case-card__name {
