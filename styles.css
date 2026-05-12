@@ -463,6 +463,10 @@ button {
   width: 34px;
 }
 
+.cases-intro__case-logo.case-card__logo--miuz img {
+  max-height: 42px;
+}
+
 .cases-intro__case strong {
   display: block;
   font-size: 15px;
@@ -1126,6 +1130,18 @@ button {
   display: none;
 }
 
+.case-card__logo--miuz {
+  padding: 10px;
+  background: var(--color-white);
+  border: 1px solid rgba(16, 21, 37, 0.08);
+}
+
+.case-card__logo--miuz img {
+  width: 100%;
+  max-height: 54px;
+  object-fit: contain;
+}
+
 .case-card__name {
   margin: 0;
   font-family: var(--font-display);
@@ -1624,7 +1640,8 @@ button {
   gap: 16px;
 }
 
-.metrics-grid--cdek {
+.metrics-grid--cdek,
+.metrics-grid--miuz {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
@@ -1664,6 +1681,18 @@ button {
   background: rgba(238, 231, 255, 0.78);
 }
 
+.metric-card:nth-child(7) {
+  background: rgba(207, 232, 255, 0.68);
+}
+
+.metric-card:nth-child(8) {
+  background: rgba(170, 242, 202, 0.64);
+}
+
+.metric-card:nth-child(9) {
+  background: rgba(255, 243, 216, 0.82);
+}
+
 .metric-card__value {
   display: block;
   font-family: var(--font-display);
@@ -1689,7 +1718,20 @@ button {
   color: #765bd8;
 }
 
-.metrics-grid--cdek .metric-card__value {
+.metric-card:nth-child(7) .metric-card__value {
+  color: #075bcf;
+}
+
+.metric-card:nth-child(8) .metric-card__value {
+  color: #237a48;
+}
+
+.metric-card:nth-child(9) .metric-card__value {
+  color: #d47a19;
+}
+
+.metrics-grid--cdek .metric-card__value,
+.metrics-grid--miuz .metric-card__value {
   font-size: 48px;
 }
 
