@@ -450,6 +450,16 @@ button {
   font-size: 22px;
 }
 
+.cases-intro__case-logo .pivaldi-logo__mark {
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+}
+
+.cases-intro__case-logo .pivaldi-logo__word {
+  font-size: 18px;
+}
+
 .cases-intro__case strong {
   display: block;
   font-size: 15px;
@@ -1049,6 +1059,48 @@ button {
   transform: skewX(-12deg) scaleX(1.12);
 }
 
+.case-card__logo--pivaldi {
+  position: relative;
+  gap: 4px;
+  background: #ffe048;
+  border: 1px solid rgba(16, 21, 37, 0.12);
+  color: #111111;
+}
+
+.case-card__logo--pivaldi::before {
+  content: "";
+  position: absolute;
+  inset: 8px 20px 10px;
+  border: 2px solid rgba(17, 17, 17, 0.14);
+  border-radius: 42% 42% 48% 48% / 28% 28% 72% 72%;
+}
+
+.pivaldi-logo__mark,
+.pivaldi-logo__word {
+  position: relative;
+  z-index: 1;
+  display: block;
+  font-family: var(--font-display);
+  line-height: 1;
+}
+
+.pivaldi-logo__mark {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 2px solid #111111;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.pivaldi-logo__word {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: -0.08em;
+}
+
 .case-card__name {
   margin: 0;
   font-family: var(--font-display);
@@ -1120,7 +1172,7 @@ button {
 }
 
 .client-voice__grid--quotes {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .client-quote {
@@ -1168,7 +1220,7 @@ button {
 }
 
 .client-voice__grid--quotes .client-quote p {
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .client-quote footer {
