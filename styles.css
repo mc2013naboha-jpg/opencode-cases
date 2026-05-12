@@ -350,7 +350,7 @@ button {
 }
 
 .cases-page__hero-alt {
-  padding: 0 40px 70px;
+  padding: 190px 40px 70px;
 }
 
 .cases-intro {
@@ -1654,6 +1654,10 @@ button {
     padding-top: 124px;
   }
 
+  .cases-page__hero-alt {
+    padding-top: 124px;
+  }
+
   .cases-intro__title {
     font-size: 56px;
   }
@@ -1833,7 +1837,7 @@ button {
   }
 
   .cases-page__hero-alt {
-    padding: 0 20px 30px;
+    padding: 100px 20px 30px;
   }
 
   .cases-page__nav,
