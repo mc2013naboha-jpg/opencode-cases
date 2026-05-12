@@ -1791,6 +1791,12 @@ button {
   padding: 46px 52px;
 }
 
+.case-change--radisson .case-change__box {
+  grid-template-columns: minmax(400px, 0.82fr) minmax(0, 1fr);
+  align-items: start;
+  padding: 46px 52px;
+}
+
 .case-change__content {
   min-width: 0;
   display: grid;
@@ -1822,6 +1828,40 @@ button {
   border-radius: 18px;
   background: var(--color-white);
   box-shadow: 0 16px 40px rgba(42, 79, 124, 0.12);
+}
+
+.case-change__radisson-assets {
+  position: relative;
+  width: min(100%, 430px);
+  min-height: 270px;
+}
+
+.radisson-tool {
+  position: absolute;
+  display: block;
+  object-fit: contain;
+  border-radius: 18px;
+  background: var(--color-white);
+  box-shadow: 0 16px 36px rgba(42, 79, 124, 0.12);
+}
+
+.radisson-tool--mango {
+  top: 0;
+  left: 0;
+  width: 242px;
+}
+
+.radisson-tool--ai {
+  top: 58px;
+  right: 0;
+  width: 168px;
+}
+
+.radisson-tool--sipuni {
+  left: 32px;
+  bottom: 0;
+  width: 214px;
+  box-shadow: none;
 }
 
 .case-change__messengers {
@@ -2122,7 +2162,8 @@ button {
 
   .case-change--media .case-change__box,
   .case-change--messengers .case-change__box,
-  .case-change--apps .case-change__box {
+  .case-change--apps .case-change__box,
+  .case-change--radisson .case-change__box {
     grid-template-columns: 1fr;
   }
 
@@ -2508,7 +2549,8 @@ button {
 
   .case-change--media .case-change__box,
   .case-change--messengers .case-change__box,
-  .case-change--apps .case-change__box {
+  .case-change--apps .case-change__box,
+  .case-change--radisson .case-change__box {
     padding: 22px;
   }
 
@@ -2553,6 +2595,29 @@ button {
   .case-change__apps {
     width: 100%;
     min-height: 200px;
+  }
+
+  .case-change__radisson-assets {
+    width: 100%;
+    min-height: 210px;
+  }
+
+  .radisson-tool {
+    border-radius: 12px;
+  }
+
+  .radisson-tool--mango {
+    width: 180px;
+  }
+
+  .radisson-tool--ai {
+    top: 52px;
+    width: 120px;
+  }
+
+  .radisson-tool--sipuni {
+    left: 22px;
+    width: 164px;
   }
 
   .app-icon {
