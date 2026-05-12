@@ -1219,6 +1219,26 @@ button {
   box-shadow: 0 28px 74px rgba(30, 72, 130, 0.18);
 }
 
+.client-slide[hidden] {
+  display: none;
+}
+
+.client-slide.is-active {
+  animation: clientSlideIn 0.22s ease both;
+}
+
+@keyframes clientSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .client-slide::before {
   content: "";
   position: absolute;
