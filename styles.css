@@ -424,6 +424,12 @@ button {
   box-shadow: var(--shadow-card);
 }
 
+.cases-intro__case.is-active {
+  border-color: rgba(63, 119, 245, 0.58);
+  background: var(--color-white);
+  box-shadow: var(--shadow-card);
+}
+
 .cases-intro__case-logo {
   min-height: 58px;
   border-radius: 16px;
