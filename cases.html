@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=remove-client-voice-1">
+  <link rel="stylesheet" href="styles.css?v=tabbed-cases-1">
 </head>
 <body>
 <div class="page" id="top">
@@ -83,33 +83,33 @@
             <p class="cases-intro__lead">Собрали реальные примеры внедрения WorkHere: как HR-команды ускоряют согласования, используют внутренние базы кандидатов, автоматизируют рутину и делают найм прозрачнее для бизнеса.</p>
 
             <nav class="cases-intro__nav" aria-label="Навигация по кейсам в первом блоке">
-              <a class="cases-intro__case cases-intro__case--ready" href="#haval-case">
+              <a class="cases-intro__case cases-intro__case--ready" href="#haval-case" data-case-tab aria-controls="haval-case" aria-selected="false">
                 <span class="cases-intro__case-logo case-card__logo case-card__logo--haval" aria-label="Логотип Haval">
                   <span>HAVAL</span>
                 </span>
                 <strong>Haval</strong>
               </a>
-              <a class="cases-intro__case cases-intro__case--ready" href="#cdek-case">
+              <a class="cases-intro__case cases-intro__case--ready" href="#cdek-case" data-case-tab aria-controls="cdek-case" aria-selected="false">
                 <span class="cases-intro__case-logo case-card__logo case-card__logo--cdek" aria-label="Логотип СДЭК">
                   <span class="case-card__logo-orbit" aria-hidden="true"></span>
                   <span class="case-card__logo-word">CDEK</span>
                 </span>
                 <strong>СДЭК</strong>
               </a>
-              <a class="cases-intro__case cases-intro__case--ready" href="#pivaldi-case">
+              <a class="cases-intro__case cases-intro__case--ready" href="#pivaldi-case" data-case-tab aria-controls="pivaldi-case" aria-selected="false">
                 <span class="cases-intro__case-logo case-card__logo case-card__logo--pivaldi" aria-label="Логотип Pivaldi">
                   <span class="pivaldi-logo__word">PIVALDI</span>
                   <span class="pivaldi-logo__ornament" aria-hidden="true"></span>
                 </span>
                 <strong>Pivaldi</strong>
               </a>
-              <a class="cases-intro__case cases-intro__case--ready" href="#miuz-case">
+              <a class="cases-intro__case cases-intro__case--ready" href="#miuz-case" data-case-tab aria-controls="miuz-case" aria-selected="false">
                 <span class="cases-intro__case-logo case-card__logo case-card__logo--miuz" aria-label="Логотип MIUZ Diamonds">
                   <img src="%D0%BC%D0%B8%D1%83%D0%B7.png" alt="MIUZ Diamonds">
                 </span>
                 <strong>MIUZ</strong>
               </a>
-              <a class="cases-intro__case cases-intro__case--ready" href="#radisson-case">
+              <a class="cases-intro__case cases-intro__case--ready" href="#radisson-case" data-case-tab aria-controls="radisson-case" aria-selected="false">
                 <span class="cases-intro__case-logo case-card__logo case-card__logo--radisson" aria-label="Логотип Radisson Rosa Khutor">
                   <img src="%D1%80%D1%8D%D0%B4%D0%B8%D1%81%D1%81%D0%BE%D0%BD.jpg" alt="Radisson Rosa Khutor">
                 </span>
@@ -144,7 +144,7 @@
       </div>
     </section>
 
-    <section class="cases-page__case" id="haval-case" aria-labelledby="haval-title">
+    <section class="cases-page__case" id="haval-case" aria-labelledby="haval-title" hidden>
       <div class="cases-page__inner">
         <article class="case-detail">
           <div class="case-detail__intro">
@@ -242,7 +242,7 @@
       </div>
     </section>
 
-    <section class="cases-page__case" id="cdek-case" aria-labelledby="cdek-title">
+    <section class="cases-page__case" id="cdek-case" aria-labelledby="cdek-title" hidden>
       <div class="cases-page__inner">
         <article class="case-detail case-detail--cdek">
           <div class="case-detail__intro">
@@ -343,7 +343,7 @@
       </div>
     </section>
 
-    <section class="cases-page__case" id="pivaldi-case" aria-labelledby="pivaldi-title">
+    <section class="cases-page__case" id="pivaldi-case" aria-labelledby="pivaldi-title" hidden>
       <div class="cases-page__inner">
         <article class="case-detail case-detail--pivaldi">
           <div class="case-detail__intro">
@@ -448,7 +448,7 @@
       </div>
     </section>
 
-    <section class="cases-page__case" id="miuz-case" aria-labelledby="miuz-title">
+    <section class="cases-page__case" id="miuz-case" aria-labelledby="miuz-title" hidden>
       <div class="cases-page__inner">
         <article class="case-detail case-detail--miuz">
           <div class="case-detail__intro">
@@ -562,7 +562,7 @@
       </div>
     </section>
 
-    <section class="cases-page__case" id="radisson-case" aria-labelledby="radisson-title">
+    <section class="cases-page__case" id="radisson-case" aria-labelledby="radisson-title" hidden>
       <div class="cases-page__inner">
         <article class="case-detail case-detail--radisson">
           <div class="case-detail__intro">
@@ -664,7 +664,7 @@
       </div>
     </section>
 
-    <section class="cases-page__cta" id="demo-request" aria-labelledby="cta-title">
+    <section class="cases-page__cta" id="demo-request" aria-labelledby="cta-title" hidden>
       <div class="cases-page__inner">
         <div class="cta-panel">
           <div class="cta-panel__content">
@@ -701,6 +701,47 @@
   burger.addEventListener('click', () => setMenu(true));
   close.addEventListener('click', () => setMenu(false));
   links.forEach((link) => link.addEventListener('click', () => setMenu(false)));
+
+  const caseTabs = document.querySelectorAll('[data-case-tab]');
+  const caseSections = document.querySelectorAll('.cases-page__case');
+  const cta = document.querySelector('#demo-request');
+
+  function showCase(caseId, shouldScroll = true) {
+    const targetCase = document.querySelector(caseId);
+
+    if (!targetCase) return;
+
+    caseSections.forEach((caseSection) => {
+      caseSection.hidden = caseSection !== targetCase;
+    });
+
+    caseTabs.forEach((tab) => {
+      const active = tab.getAttribute('href') === caseId;
+      tab.classList.toggle('is-active', active);
+      tab.setAttribute('aria-selected', String(active));
+    });
+
+    if (cta) {
+      cta.hidden = false;
+    }
+
+    if (shouldScroll) {
+      targetCase.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  caseTabs.forEach((tab) => {
+    tab.addEventListener('click', (event) => {
+      event.preventDefault();
+      const caseId = tab.getAttribute('href');
+      showCase(caseId);
+      history.pushState(null, '', caseId);
+    });
+  });
+
+  if (window.location.hash && Array.from(caseSections).some((caseSection) => `#${caseSection.id}` === window.location.hash)) {
+    showCase(window.location.hash, false);
+  }
 
 </script>
 </body>
