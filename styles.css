@@ -3823,3 +3823,69 @@ body {
   border-color: rgba(47, 107, 255, 0.14);
   color: var(--color-muted);
 }
+
+/* Hero case logo navigation: logos only */
+.cases-intro__nav .cases-intro__case {
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
+.cases-intro__nav .cases-intro__case--ready:hover,
+.cases-intro__nav .cases-intro__case.is-active {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
+.cases-intro__nav .cases-intro__case strong {
+  display: none;
+}
+
+.cases-intro__nav .cases-intro__case-logo {
+  width: 100%;
+  min-height: 92px;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  transition: filter var(--transition), opacity var(--transition), transform var(--transition);
+}
+
+.cases-intro__nav .cases-intro__case--ready:hover .cases-intro__case-logo,
+.cases-intro__nav .cases-intro__case.is-active .cases-intro__case-logo {
+  filter: drop-shadow(0 16px 24px rgba(47, 107, 255, 0.18));
+  transform: translateY(-2px);
+}
+
+.cases-intro__nav .cases-intro__case:focus-visible {
+  outline: 2px solid rgba(47, 107, 255, 0.72);
+  outline-offset: 8px;
+  border-radius: 18px;
+}
+
+.cases-intro__nav .cases-intro__case-logo.case-card__logo--cdek,
+.cases-intro__nav .cases-intro__case-logo.case-card__logo--miuz,
+.cases-intro__nav .cases-intro__case-logo.case-card__logo--radisson {
+  background: transparent;
+  border: 0;
+}
+
+.cases-intro__nav .cases-intro__case-logo.case-card__logo--miuz img,
+.cases-intro__nav .cases-intro__case-logo.case-card__logo--radisson img {
+  max-width: 94%;
+  max-height: 70px;
+}
+
+@media screen and (max-width: 743.98px) {
+  .cases-intro__nav .cases-intro__case-logo {
+    min-height: 74px;
+  }
+
+  .cases-intro__nav .cases-intro__case-logo.case-card__logo--miuz img,
+  .cases-intro__nav .cases-intro__case-logo.case-card__logo--radisson img {
+    max-height: 58px;
+  }
+}
