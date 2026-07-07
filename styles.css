@@ -3452,6 +3452,10 @@ body {
   }
 
   .cases-intro__clouds {
+    inset: auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     grid-template-columns: 1fr;
     gap: 10px;
     padding: 12px;
@@ -4115,6 +4119,10 @@ body {
   }
 
   .cases-intro__cloud {
+    inset: auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     min-height: auto;
     padding: 18px;
     border-radius: 20px;
