@@ -4339,7 +4339,7 @@ body {
   .cases-intro,
   .case-detail,
   .cta-panel {
-    max-width: calc(100vw - 24px);
+    max-width: min(100%, 343px);
   }
 
   .cases-intro,
