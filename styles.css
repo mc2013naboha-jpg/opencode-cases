@@ -3971,6 +3971,7 @@ body {
 
   .cases-page__hero-alt {
     padding: 92px 16px 28px;
+    overflow: hidden;
   }
 
   .cases-page__case,
@@ -3978,12 +3979,21 @@ body {
   .footer {
     padding-left: 16px;
     padding-right: 16px;
+    overflow: hidden;
+  }
+
+  .cases-page__inner {
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
   }
 
   .cases-intro,
   .case-detail,
   .cta-panel {
-    max-width: 100%;
+    width: 100%;
+    max-width: calc(100vw - 32px);
+    margin-inline: auto;
     border-radius: 26px;
     box-shadow: 0 16px 42px rgba(47, 107, 255, 0.1);
   }
@@ -4318,6 +4328,12 @@ body {
   .footer {
     padding-left: 12px;
     padding-right: 12px;
+  }
+
+  .cases-intro,
+  .case-detail,
+  .cta-panel {
+    max-width: calc(100vw - 24px);
   }
 
   .cases-intro,
