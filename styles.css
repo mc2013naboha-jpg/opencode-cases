@@ -3991,6 +3991,7 @@ body {
   .cases-intro,
   .case-detail,
   .cta-panel {
+    display: block;
     width: 100%;
     max-width: calc(100vw - 32px);
     margin-inline: auto;
@@ -4121,6 +4122,11 @@ body {
   }
 
   .cases-intro__clouds {
+    inset: auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 22px;
     grid-template-columns: 1fr;
     gap: 10px;
     padding: 12px;
