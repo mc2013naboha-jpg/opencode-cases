@@ -4443,3 +4443,25 @@ body {
     font-size: 28px;
   }
 }
+
+/* Heading weight refinement for system font stack */
+.cases-intro__title,
+.case-detail__title,
+.case-results__title,
+.case-story__title,
+.case-quote__title,
+.case-change__title,
+.cta-panel__title,
+.section-title,
+.case-block__title,
+.case-story__item h4,
+.case-solution__title,
+.case-solution__item h4 {
+  font-weight: 700;
+}
+
+.metric-card__value,
+.cases-intro__cloud strong,
+.case-fact strong {
+  font-weight: 700;
+}
