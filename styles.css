@@ -3,7 +3,7 @@
   --font-display: Arial, Helvetica, sans-serif;
   --color-primary: #2f6bff;
   --color-primary-alt: #3478ff;
-  --color-primary-dark: #174ea6;
+  --color-primary-dark: #339f61;
   --color-bg: #f7faff;
   --color-card: #ffffff;
   --color-card-blue: #eef6ff;
@@ -18,7 +18,7 @@
   --color-green: #2fa56a;
   --color-green-hover: #248856;
   --color-blue: #2f6bff;
-  --color-blue-deep: #174ea6;
+  --color-blue-deep: #339f61;
   --color-sky: #eef6ff;
   --color-yellow: #eef6ff;
   --color-mint: #eef6ff;
@@ -3499,7 +3499,7 @@ body {
 :root {
   --color-primary: #2f6bff;
   --color-primary-alt: #3478ff;
-  --color-primary-dark: #174ea6;
+  --color-primary-dark: #339f61;
   --color-bg: #f7faff;
   --color-card: #ffffff;
   --color-card-blue: #eef6ff;
@@ -3510,7 +3510,7 @@ body {
   --color-glow: rgba(47, 107, 255, 0.18);
   --color-cta: #2fa56a;
   --color-blue: #2f6bff;
-  --color-blue-deep: #174ea6;
+  --color-blue-deep: #339f61;
   --color-sky: #eef6ff;
   --color-soft: #f5f8ff;
   --color-yellow: #eef6ff;
