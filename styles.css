@@ -2436,6 +2436,7 @@ button {
   .case-nav,
   .cases-intro,
   .client-voice,
+  .cases-intro,
   .case-detail__intro,
   .case-detail__columns,
   .case-story,
@@ -4136,6 +4137,7 @@ body {
     line-height: 1.05;
   }
 
+  .cases-intro,
   .case-detail__intro,
   .case-detail__columns,
   .case-story__grid,
