@@ -8,7 +8,8 @@
 
 :root {
   --font-main: "Inter", Arial, sans-serif;
-  --font-display: "Thicker Medium", "Thicker", Arial, Helvetica, sans-serif;
+  --font-display: Arial, Helvetica, sans-serif;
+  --font-heading: "Thicker Medium", "Thicker", Arial, Helvetica, sans-serif;
   --color-primary: #2f6bff;
   --color-primary-alt: #3478ff;
   --color-primary-dark: #339f61;
@@ -4452,7 +4453,7 @@ body {
   }
 }
 
-/* Heading weight refinement for system font stack */
+/* Heading typography refinement */
 .cases-intro__title,
 .case-detail__title,
 .case-results__title,
@@ -4465,7 +4466,13 @@ body {
 .case-story__item h4,
 .case-solution__title,
 .case-solution__item h4 {
-  font-weight: 700;
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.page :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-heading);
+  font-weight: 600;
 }
 
 .metric-card__value,
@@ -5237,4 +5244,20 @@ body {
   .design-lab .cta-panel {
     padding: 22px 16px;
   }
+}
+
+/* Keep Thicker only on headings in the design-lab variant. */
+.design-lab :is(h1, h2, h3, h4, h5, h6),
+.design-lab .cases-intro__title,
+.design-lab .case-detail__title,
+.design-lab .case-results__title,
+.design-lab .case-story__title,
+.design-lab .case-quote__title,
+.design-lab .case-change__title,
+.design-lab .cta-panel__title,
+.design-lab .section-title,
+.design-lab .case-block__title,
+.design-lab .case-solution__title {
+  font-family: var(--font-heading);
+  font-weight: 600;
 }
