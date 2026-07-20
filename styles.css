@@ -1,6 +1,14 @@
+@font-face {
+  font-family: "Thicker Medium";
+  src: url("thicker-medium.otf") format("opentype");
+  font-weight: 500 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --font-main: "Inter", Arial, sans-serif;
-  --font-display: Arial, Helvetica, sans-serif;
+  --font-display: "Thicker Medium", "Thicker", Arial, Helvetica, sans-serif;
   --color-primary: #2f6bff;
   --color-primary-alt: #3478ff;
   --color-primary-dark: #339f61;
