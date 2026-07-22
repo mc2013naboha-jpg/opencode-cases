@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=main-style-22">
+  <link rel="stylesheet" href="styles.css?v=main-style-23">
 </head>
 <body>
 <div class="page" id="top">
@@ -730,9 +730,94 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer__inner">
-      <img class="footer__logo" src="%D0%BB%D0%BE%D0%B3%D0%BE.png" alt="WorkHere" loading="lazy" decoding="async">
+  <footer class="footer" id="footer">
+    <div class="footer__panel">
+      <div class="footer__inner">
+        <a class="footer__brand" href="https://ats.workhere.ru/" aria-label="WorkHere">
+          <img class="footer__logo" src="%D0%BB%D0%BE%D0%B3%D0%BE.png" alt="WorkHere" loading="lazy" decoding="async">
+        </a>
+
+        <nav class="footer__nav" aria-label="Навигация в подвале">
+          <div class="footer__column">
+            <h3 class="footer__column-title">Продукт</h3>
+            <ul class="footer__list">
+              <li><a class="footer__link" href="https://ats.workhere.ru/#pricing">Тарифы</a></li>
+              <li><a class="footer__link" href="https://ats.workhere.ru/#security">Безопасность</a></li>
+              <li><a class="footer__link" href="https://ats.workhere.ru/#api-power">API</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__column-title">Возможности</h3>
+            <ul class="footer__list">
+              <li><a class="footer__link" href="https://ats.workhere.ru/#feature-automation">Автоматизация</a></li>
+              <li><a class="footer__link" href="https://ats.workhere.ru/#api-power">Интеграции</a></li>
+              <li><a class="footer__link" href="https://ats.workhere.ru/#feature-analytics">Аналитика</a></li>
+              <li><a class="footer__link" href="https://ats.workhere.ru/#premier">Для крупных клиентов</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__column-title">Ресурсы</h3>
+            <ul class="footer__list">
+              <li><a class="footer__link" href="https://ats.workhere.ru/#journal">Журнал WorkHere</a></li>
+              <li><a class="footer__link" href="#top">Кейсы</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__column-title">Контакты</h3>
+            <ul class="footer__list">
+              <li><a class="footer__link" href="mailto:hello@workhere.ru">hello@workhere.ru</a></li>
+              <li><a class="footer__link" href="tel:+74994721210">+7 (499) 472-12-10</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__column-title">Официальное</h3>
+            <ul class="footer__list">
+              <li><a class="footer__link" href="https://api.workhere.ru/files/employer/user-agreement.pdf" target="_blank" rel="noopener noreferrer">Пользовательское соглашение</a></li>
+              <li><a class="footer__link" href="https://workhere.ru/privacy-policy" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__column-title">Социальные сети</h3>
+            <ul class="footer__socials">
+              <li>
+                <a class="footer__social" href="https://max.ru/workhere" target="_blank" rel="noopener noreferrer" aria-label="WorkHere в Max">
+                  <svg viewBox="0 0 80 80" aria-hidden="true">
+                    <defs><linearGradient id="max-gradient" x1="8" y1="66" x2="76" y2="16" gradientUnits="userSpaceOnUse"><stop stop-color="#44ccff"/><stop offset=".66" stop-color="#5533ee"/><stop offset="1" stop-color="#9933dd"/></linearGradient></defs>
+                    <rect width="80" height="80" rx="20" fill="url(#max-gradient)"/>
+                    <path fill="white" fill-rule="evenodd" d="M40.7 70.3c-6 0-8.8-.9-13.7-4.4-3 3.9-12.8 7-13.2 1.7 0-4-.9-7.3-1.8-11-1.2-4.4-2.6-9.4-2.6-16.7 0-17.3 14.2-30.3 31.1-30.3 16.8 0 30.1 13.6 30.1 30.5.1 16.6-13.3 30.1-29.9 30.2Zm.2-45.8c-8.2-.4-14.6 5.3-16 14.2-1.2 7.4.9 16.4 2.7 16.8.8.2 3-1.5 4.3-2.8 2.2 1.5 4.8 2.4 7.4 2.6 8.5.4 15.8-6.1 16.3-14.6.4-8.5-6.2-15.7-14.7-16.2Z"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="footer__social" href="https://t.me/WH_helper" target="_blank" rel="noopener noreferrer" aria-label="WorkHere в Telegram">
+                  <svg viewBox="0 0 80 80" aria-hidden="true">
+                    <rect width="80" height="80" rx="20" fill="#2aabee"/>
+                    <path fill="white" d="M18.5 39.6c11.8-5.1 19.7-8.4 23.7-10.1 11.2-4.6 13.5-5.4 15.1-5.4.7 0 1.7.2 2.1.8.2.3.2.8.1 2.3-.6 6.3-3.2 21.7-4.6 28.8-.6 3-1.7 4-2.8 4.1-2.4.2-4.1-1.5-6.4-3-3.6-2.3-5.6-3.7-9-6-4-2.6-1.4-4 1-6.4.6-.6 10.9-9.9 11.1-10.7 0-.5-.4-.9-1-.7-.4.1-6.1 3.8-17.1 11.2-1.6 1.1-3.1 1.6-4.4 1.6-1.5 0-4.2-.8-6.3-1.5-2.5-.8-4.6-1.2-4.4-2.6.1-.7 1.1-1.5 3-2.2Z"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="footer__social" href="https://vk.com/workhere_vk" target="_blank" rel="noopener noreferrer" aria-label="WorkHere во ВКонтакте">
+                  <svg viewBox="0 0 80 80" aria-hidden="true">
+                    <rect width="80" height="80" rx="20" fill="#0077ff"/>
+                    <path fill="white" d="M42.7 57.6c-18.1 0-28.4-12.4-28.8-33h9c.3 15.1 7 21.5 12.3 22.8V24.6h8.5v13c5.2-.5 10.7-6.5 12.5-13h8.5c-1.4 8.1-7.3 14-11.6 16.4 4.3 2 11 7.2 13.6 16.6h-9.4c-2-6.3-7-11.1-13.6-11.8v11.8h-1Z"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="footer__bottom">
+          <p class="footer__copyright">© ООО “Макрон Цифровые системы”, 2017 - 2026</p>
+          <a class="footer__privacy" href="https://workhere.ru/privacy-policy" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a>
+        </div>
+      </div>
     </div>
   </footer>
 </div>
