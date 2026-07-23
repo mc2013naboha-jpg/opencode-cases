@@ -6111,6 +6111,93 @@ body {
   }
 }
 
+/* Compact case result cards. */
+.case-results {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.case-results__head {
+  margin-bottom: 24px;
+}
+
+.metric-card,
+.metric-card:nth-child(1),
+.metric-card:nth-child(2),
+.metric-card:nth-child(3),
+.metric-card:nth-child(4),
+.metric-card:nth-child(5),
+.metric-card:nth-child(6),
+.metric-card:nth-child(7),
+.metric-card:nth-child(8),
+.metric-card:nth-child(9) {
+  min-height: 108px;
+  gap: 8px;
+  padding: 18px 22px;
+}
+
+.metric-card.metric-card:first-child {
+  min-height: 132px;
+  padding: 20px 26px;
+}
+
+.metric-card__value,
+.metric-card:nth-child(2) .metric-card__value,
+.metric-card:nth-child(3) .metric-card__value,
+.metric-card:nth-child(4) .metric-card__value,
+.metric-card:nth-child(5) .metric-card__value,
+.metric-card:nth-child(6) .metric-card__value,
+.metric-card:nth-child(7) .metric-card__value,
+.metric-card:nth-child(8) .metric-card__value,
+.metric-card:nth-child(9) .metric-card__value {
+  font-size: clamp(36px, 3vw, 46px);
+}
+
+.metric-card.metric-card:first-child .metric-card__value {
+  font-size: clamp(54px, 5vw, 68px);
+}
+
+.metric-card__text {
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.metric-card.metric-card:first-child .metric-card__text {
+  font-size: 16px;
+}
+
+.metric-card.metric-card:first-child::after {
+  top: 20px;
+  right: 24px;
+  width: 88px;
+  height: 58px;
+}
+
+@media screen and (max-width: 680px) {
+  .case-results {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+
+  .metric-card,
+  .metric-card:nth-child(1),
+  .metric-card:nth-child(2),
+  .metric-card:nth-child(3),
+  .metric-card:nth-child(4),
+  .metric-card:nth-child(5),
+  .metric-card:nth-child(6),
+  .metric-card:nth-child(7),
+  .metric-card:nth-child(8),
+  .metric-card:nth-child(9) {
+    min-height: 104px;
+    padding: 18px;
+  }
+
+  .metric-card.metric-card:first-child {
+    min-height: 124px;
+  }
+}
+
 /* Final hero results card layout. */
 .cases-intro__clouds {
   position: relative;
