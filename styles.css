@@ -6198,6 +6198,19 @@ body {
   }
 }
 
+/* Compact CDEK change section without excess vertical whitespace. */
+#cdek-case .case-change--media {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  #cdek-case .case-change--media {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
 /* Final hero results card layout. */
 .cases-intro__clouds {
   position: relative;
