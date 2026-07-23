@@ -1,15 +1,71 @@
 @font-face {
-  font-family: "Thicker Medium";
-  src: url("thicker-medium.otf") format("opentype");
-  font-weight: 500 900;
+  font-family: "Exo 2";
+  src: url("exo2_0_extralight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url("exo2_0_light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url("exo2_0_regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url("exo2_0_italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url("exo2_0_medium.otf") format("opentype");
+  font-weight: 500 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url("exo2_0_bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url("exo2_0_extrabold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url("exo2_0_black.otf") format("opentype");
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 :root {
-  --font-main: "Inter", Arial, sans-serif;
-  --font-display: Arial, Helvetica, sans-serif;
-  --font-heading: "Thicker Medium", "Thicker", Arial, Helvetica, sans-serif;
+  --font-main: "Exo 2", Arial, sans-serif;
+  --font-display: "Exo 2", Arial, sans-serif;
+  --font-heading: "Exo 2", Arial, sans-serif;
   --color-primary: #2f6bff;
   --color-primary-alt: #3478ff;
   --color-primary-dark: #339f61;
