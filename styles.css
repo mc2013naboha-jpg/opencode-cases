@@ -6211,6 +6211,10 @@ body {
   align-items: start;
 }
 
+#cdek-case .case-change--media .case-change__text {
+  align-self: center;
+}
+
 @media screen and (max-width: 768px) {
   #cdek-case .case-change--media {
     padding-top: 12px;
