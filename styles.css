@@ -6204,6 +6204,13 @@ body {
   padding-bottom: 18px;
 }
 
+#cdek-case .case-change--media .case-change__box {
+  min-height: 0;
+  height: auto;
+  padding: 0;
+  align-items: start;
+}
+
 @media screen and (max-width: 768px) {
   #cdek-case .case-change--media {
     padding-top: 12px;
