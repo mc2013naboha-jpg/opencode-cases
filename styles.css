@@ -5313,11 +5313,29 @@ body {
   box-shadow: 0 8px 24px rgba(41, 99, 233, 0.08);
   opacity: 1;
   cursor: pointer;
+  animation: caseLogoPulse 7.5s ease-in-out infinite;
   transition: border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.cases-intro__nav .cases-intro__case:nth-child(2) {
+  animation-delay: 1.5s;
+}
+
+.cases-intro__nav .cases-intro__case:nth-child(3) {
+  animation-delay: 3s;
+}
+
+.cases-intro__nav .cases-intro__case:nth-child(4) {
+  animation-delay: 4.5s;
+}
+
+.cases-intro__nav .cases-intro__case:nth-child(5) {
+  animation-delay: 6s;
 }
 
 .cases-intro__nav .cases-intro__case--ready:hover,
 .cases-intro__nav .cases-intro__case.is-active {
+  animation: none;
   border-color: rgba(41, 99, 233, 0.62);
   background: #ffffff;
   box-shadow: 0 14px 34px rgba(41, 99, 233, 0.16);
@@ -5325,6 +5343,7 @@ body {
 }
 
 .cases-intro__nav .cases-intro__case.is-active {
+  animation: none;
   box-shadow: inset 0 0 0 1px rgba(41, 99, 233, 0.28), 0 14px 34px rgba(41, 99, 233, 0.16);
 }
 
@@ -5384,6 +5403,26 @@ body {
   width: auto;
   max-width: 88px;
   max-height: 64px;
+}
+
+@keyframes caseLogoPulse {
+  0%, 22%, 100% {
+    border-color: rgba(41, 99, 233, 0.16);
+    background: rgba(255, 255, 255, 0.84);
+    box-shadow: 0 8px 24px rgba(41, 99, 233, 0.08);
+  }
+
+  9%, 13% {
+    border-color: rgba(41, 99, 233, 0.56);
+    background: #ffffff;
+    box-shadow: 0 14px 38px rgba(41, 99, 233, 0.22), 0 0 0 4px rgba(41, 99, 233, 0.06);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cases-intro__nav .cases-intro__case {
+    animation: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
