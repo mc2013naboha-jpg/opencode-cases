@@ -4589,6 +4589,219 @@ body {
   }
 }
 
+/* CDEK: poster-style company impact with centered product screenshot. */
+#cdek-case .cdek-impact-poster {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(72px, 7vw, 112px) clamp(20px, 4vw, 64px) clamp(80px, 8vw, 128px);
+  color: #111217;
+  background: #fffdf8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#cdek-case .cdek-impact-poster .cdek-impact-poster__inner {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+#cdek-case .cdek-impact-poster__title {
+  position: relative;
+  z-index: 2;
+  max-width: 1180px;
+  margin: 0 auto clamp(64px, 6vw, 92px);
+  color: #111217;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(50px, 5.7vw, 86px);
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  text-align: center;
+  text-wrap: balance;
+}
+
+#cdek-case .cdek-impact-poster__title span {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  padding: 0 0.08em 0.03em;
+}
+
+#cdek-case .cdek-impact-poster__title span::before {
+  position: absolute;
+  z-index: -1;
+  inset: 5% -4% -3%;
+  content: "";
+  background: #ff7b5c;
+  clip-path: polygon(4% 13%, 86% 0, 100% 23%, 96% 88%, 12% 100%, 0 74%);
+  transform: rotate(-1.2deg);
+}
+
+#cdek-case .cdek-impact-poster__media {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  animation: cdek-hiring-map-in 600ms 100ms ease-out both;
+}
+
+#cdek-case .cdek-impact-poster__media::before {
+  position: absolute;
+  z-index: -1;
+  inset: -16px -18px;
+  content: "";
+  border-radius: 26px;
+  background: #9eeff8;
+  transform: rotate(-1deg);
+}
+
+#cdek-case .cdek-impact-poster__image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  border: 2px solid #111217;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: none;
+}
+
+#cdek-case .cdek-impact-poster__summary {
+  position: relative;
+  z-index: 3;
+  width: min(92%, 1020px);
+  margin: clamp(52px, 5vw, 76px) auto 0;
+  padding: clamp(34px, 4vw, 54px) clamp(32px, 5vw, 68px);
+  border-radius: 24px;
+  background: #b5ffc9;
+  transform: rotate(0.45deg);
+  animation: cdek-hiring-map-in 600ms 240ms ease-out both;
+}
+
+#cdek-case .cdek-impact-poster__summary .case-change__text {
+  max-width: 880px;
+  margin: 0 auto;
+  color: #111217;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(19px, 1.55vw, 23px);
+  font-weight: 500;
+  line-height: 1.55;
+  text-align: left;
+}
+
+#cdek-case .cdek-impact-poster__decor {
+  position: absolute;
+  z-index: 1;
+  fill: none;
+  stroke: #111217;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+#cdek-case .cdek-impact-poster__decor--star {
+  top: 0;
+  left: 1%;
+  width: clamp(40px, 4vw, 62px);
+}
+
+#cdek-case .cdek-impact-poster__decor--rays {
+  top: 1%;
+  right: 0;
+  width: clamp(56px, 5vw, 82px);
+}
+
+@media screen and (max-width: 820px) {
+  #cdek-case .cdek-impact-poster {
+    padding: 60px 20px 72px;
+  }
+
+  #cdek-case .cdek-impact-poster__title {
+    margin-bottom: 54px;
+    font-size: clamp(42px, 8vw, 64px);
+  }
+
+  #cdek-case .cdek-impact-poster__media::before {
+    inset: -10px;
+    border-radius: 22px;
+  }
+
+  #cdek-case .cdek-impact-poster__image {
+    border-radius: 16px;
+  }
+
+  #cdek-case .cdek-impact-poster__summary {
+    width: 94%;
+    margin-top: 46px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  #cdek-case .cdek-impact-poster {
+    padding: 48px 14px 58px;
+  }
+
+  #cdek-case .cdek-impact-poster__title {
+    margin-bottom: 38px;
+    font-size: clamp(36px, 10.5vw, 46px);
+    line-height: 1.02;
+  }
+
+  #cdek-case .cdek-impact-poster__media::before {
+    inset: -7px;
+    border-radius: 17px;
+    transform: rotate(-0.7deg);
+  }
+
+  #cdek-case .cdek-impact-poster__image {
+    border-width: 1.5px;
+    border-radius: 12px;
+  }
+
+  #cdek-case .cdek-impact-poster__summary {
+    width: 100%;
+    margin-top: 34px;
+    padding: 28px 24px;
+    border-radius: 19px;
+    transform: none;
+  }
+
+  #cdek-case .cdek-impact-poster__summary .case-change__text {
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  #cdek-case .cdek-impact-poster__decor {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #cdek-case .cdek-impact-poster__media,
+  #cdek-case .cdek-impact-poster__summary {
+    animation: none;
+  }
+}
+
+
 /* CDEK: poster-style transition from hiring challenge to the implemented system. */
 .cdek-hiring-map {
   position: relative;
@@ -6542,30 +6755,6 @@ body {
 
   .metric-card.metric-card:first-child {
     min-height: 124px;
-  }
-}
-
-/* Compact CDEK change section without excess vertical whitespace. */
-#cdek-case .case-change--media {
-  padding-top: 18px;
-  padding-bottom: 18px;
-}
-
-#cdek-case .case-change--media .case-change__box {
-  min-height: 0;
-  height: auto;
-  padding: 0;
-  align-items: start;
-}
-
-#cdek-case .case-change--media .case-change__text {
-  align-self: center;
-}
-
-@media screen and (max-width: 768px) {
-  #cdek-case .case-change--media {
-    padding-top: 12px;
-    padding-bottom: 12px;
   }
 }
 
