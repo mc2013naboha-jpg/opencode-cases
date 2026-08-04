@@ -4801,6 +4801,323 @@ body {
   }
 }
 
+/* CDEK: vibrant poster grid for five-month results. */
+#cdek-case .cdek-results-poster {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(72px, 7vw, 110px) clamp(20px, 4vw, 64px) clamp(82px, 8vw, 124px);
+  color: #111217;
+  background: #fffdf8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#cdek-case .cdek-results-poster .case-results__head {
+  position: relative;
+  z-index: 2;
+  max-width: 1320px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin: 0 auto clamp(52px, 5vw, 76px);
+}
+
+#cdek-case .cdek-results-poster .case-results__title {
+  max-width: 1050px;
+  margin: 0;
+  color: #111217;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(52px, 5.7vw, 86px);
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  text-wrap: balance;
+}
+
+#cdek-case .cdek-results-poster .case-results__title span {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  padding: 0 0.1em 0.03em;
+  white-space: nowrap;
+}
+
+#cdek-case .cdek-results-poster .case-results__title span::before {
+  position: absolute;
+  z-index: -1;
+  inset: 4% -4% -2%;
+  content: "";
+  background: #ffe276;
+  clip-path: polygon(5% 10%, 88% 0, 100% 24%, 96% 88%, 12% 100%, 0 72%);
+  transform: rotate(-1.2deg);
+}
+
+#cdek-case .cdek-results-poster .case-results__tag {
+  flex: 0 0 auto;
+  margin-bottom: 6px;
+  padding: 14px 22px;
+  border: 0;
+  border-radius: 999px;
+  color: #ffffff;
+  background: #3b8cff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+#cdek-case .cdek-results-poster .metrics-grid,
+#cdek-case .cdek-results-poster .metrics-grid--cdek {
+  position: relative;
+  z-index: 2;
+  max-width: 1320px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(174px, auto)) minmax(210px, auto);
+  gap: 18px;
+  margin: 0 auto;
+}
+
+#cdek-case .cdek-results-poster .metric-card,
+#cdek-case .cdek-results-poster .metric-card:nth-child(1),
+#cdek-case .cdek-results-poster .metric-card:nth-child(2),
+#cdek-case .cdek-results-poster .metric-card:nth-child(3),
+#cdek-case .cdek-results-poster .metric-card:nth-child(4),
+#cdek-case .cdek-results-poster .metric-card:nth-child(5),
+#cdek-case .cdek-results-poster .metric-card:nth-child(6) {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+  padding: clamp(28px, 3.2vw, 46px);
+  border: 0;
+  border-radius: 24px;
+  box-shadow: none;
+  transform: none;
+  animation: cdek-hiring-map-in 500ms ease-out both;
+}
+
+#cdek-case .cdek-results-poster .metric-card:nth-child(1) {
+  grid-column: 1 / 9;
+  grid-row: 1 / 3;
+  min-height: 366px;
+  background: #3b8cff;
+  transform: rotate(-0.45deg);
+}
+
+#cdek-case .cdek-results-poster .metric-card:nth-child(2) {
+  grid-column: 9 / -1;
+  grid-row: 1;
+  background: #ffe276;
+  transform: rotate(0.7deg);
+  animation-delay: 60ms;
+}
+
+#cdek-case .cdek-results-poster .metric-card:nth-child(3) {
+  grid-column: 9 / -1;
+  grid-row: 2;
+  background: #b5ffc9;
+  transform: rotate(-0.6deg);
+  animation-delay: 120ms;
+}
+
+#cdek-case .cdek-results-poster .metric-card:nth-child(4) {
+  grid-column: 1 / 5;
+  grid-row: 3;
+  background: #ff7b5c;
+  transform: rotate(0.45deg);
+  animation-delay: 180ms;
+}
+
+#cdek-case .cdek-results-poster .metric-card:nth-child(5) {
+  grid-column: 5 / 9;
+  grid-row: 3;
+  background: #9eeff8;
+  transform: rotate(-0.5deg);
+  animation-delay: 240ms;
+}
+
+#cdek-case .cdek-results-poster .metric-card:nth-child(6) {
+  grid-column: 9 / -1;
+  grid-row: 3;
+  background: #111217;
+  transform: rotate(0.55deg);
+  animation-delay: 300ms;
+}
+
+#cdek-case .cdek-results-poster .metric-card::after,
+#cdek-case .cdek-results-poster .metric-card:first-child::after {
+  display: none;
+}
+
+#cdek-case .cdek-results-poster .metric-card__value,
+#cdek-case .cdek-results-poster .metric-card:nth-child(1) .metric-card__value,
+#cdek-case .cdek-results-poster .metric-card:nth-child(2) .metric-card__value,
+#cdek-case .cdek-results-poster .metric-card:nth-child(3) .metric-card__value,
+#cdek-case .cdek-results-poster .metric-card:nth-child(4) .metric-card__value,
+#cdek-case .cdek-results-poster .metric-card:nth-child(5) .metric-card__value,
+#cdek-case .cdek-results-poster .metric-card:nth-child(6) .metric-card__value {
+  position: relative;
+  z-index: 1;
+  width: fit-content;
+  margin: 0;
+  color: #111217;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(58px, 5.6vw, 84px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.065em;
+  text-shadow: none;
+}
+
+#cdek-case .cdek-results-poster .metric-card:nth-child(1) .metric-card__value {
+  color: #ffffff;
+  font-size: clamp(100px, 11vw, 158px);
+}
+
+#cdek-case .cdek-results-poster .metric-card:nth-child(6) .metric-card__value {
+  color: #ffe276;
+}
+
+#cdek-case .cdek-results-poster .metric-card__text,
+#cdek-case .cdek-results-poster .metric-card:first-child .metric-card__text {
+  max-width: 100%;
+  margin: 0;
+  color: #111217;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(17px, 1.4vw, 21px);
+  font-weight: 600;
+  line-height: 1.38;
+}
+
+#cdek-case .cdek-results-poster .metric-card:nth-child(1) .metric-card__text,
+#cdek-case .cdek-results-poster .metric-card:nth-child(6) .metric-card__text {
+  color: #ffffff;
+}
+
+#cdek-case .cdek-results-poster__decor {
+  position: absolute;
+  z-index: 1;
+  fill: none;
+  stroke: #111217;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+#cdek-case .cdek-results-poster__decor--star {
+  top: 4%;
+  left: 2%;
+  width: clamp(40px, 4vw, 62px);
+}
+
+#cdek-case .cdek-results-poster__decor--rays {
+  top: 5%;
+  right: 2%;
+  width: clamp(56px, 5vw, 82px);
+}
+
+@media screen and (max-width: 1020px) {
+  #cdek-case .cdek-results-poster .case-results__head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  #cdek-case .cdek-results-poster .metrics-grid,
+  #cdek-case .cdek-results-poster .metrics-grid--cdek {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
+  }
+
+  #cdek-case .cdek-results-poster .metric-card:nth-child(1),
+  #cdek-case .cdek-results-poster .metric-card:nth-child(2),
+  #cdek-case .cdek-results-poster .metric-card:nth-child(3),
+  #cdek-case .cdek-results-poster .metric-card:nth-child(4),
+  #cdek-case .cdek-results-poster .metric-card:nth-child(5),
+  #cdek-case .cdek-results-poster .metric-card:nth-child(6) {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 210px;
+  }
+
+  #cdek-case .cdek-results-poster .metric-card:nth-child(1),
+  #cdek-case .cdek-results-poster .metric-card:nth-child(6) {
+    grid-column: 1 / -1;
+  }
+
+  #cdek-case .cdek-results-poster .metric-card:nth-child(1) {
+    min-height: 300px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  #cdek-case .cdek-results-poster {
+    padding: 54px 14px 66px;
+  }
+
+  #cdek-case .cdek-results-poster .case-results__head {
+    gap: 24px;
+    margin-bottom: 42px;
+  }
+
+  #cdek-case .cdek-results-poster .case-results__title {
+    font-size: clamp(40px, 11vw, 52px);
+    line-height: 1;
+  }
+
+  #cdek-case .cdek-results-poster .case-results__title span {
+    white-space: normal;
+  }
+
+  #cdek-case .cdek-results-poster .case-results__tag {
+    padding: 11px 16px;
+    font-size: 13px;
+  }
+
+  #cdek-case .cdek-results-poster .metrics-grid,
+  #cdek-case .cdek-results-poster .metrics-grid--cdek {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  #cdek-case .cdek-results-poster .metric-card:nth-child(1),
+  #cdek-case .cdek-results-poster .metric-card:nth-child(2),
+  #cdek-case .cdek-results-poster .metric-card:nth-child(3),
+  #cdek-case .cdek-results-poster .metric-card:nth-child(4),
+  #cdek-case .cdek-results-poster .metric-card:nth-child(5),
+  #cdek-case .cdek-results-poster .metric-card:nth-child(6) {
+    grid-column: 1;
+    min-height: 190px;
+    padding: 28px 24px;
+    border-radius: 20px;
+    transform: none;
+  }
+
+  #cdek-case .cdek-results-poster .metric-card:nth-child(1) {
+    min-height: 260px;
+  }
+
+  #cdek-case .cdek-results-poster .metric-card:nth-child(1) .metric-card__value {
+    font-size: clamp(78px, 23vw, 100px);
+  }
+
+  #cdek-case .cdek-results-poster__decor {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #cdek-case .cdek-results-poster .metric-card {
+    animation: none;
+  }
+}
+
 
 /* CDEK: poster-style transition from hiring challenge to the implemented system. */
 .cdek-hiring-map {
