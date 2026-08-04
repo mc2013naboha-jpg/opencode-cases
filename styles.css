@@ -4650,7 +4650,7 @@ body {
 #cdek-case .cdek-impact-poster__media {
   position: relative;
   z-index: 2;
-  width: min(100%, 1120px);
+  width: min(100%, 560px);
   margin: 0 auto;
   padding: 0;
   border: 0;
