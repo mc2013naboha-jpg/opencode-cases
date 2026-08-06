@@ -5358,10 +5358,11 @@ body {
   max-width: 1260px;
   margin: 0 auto;
   color: #111217;
-  font-size: clamp(44px, 5.35vw, 84px);
+  font-family: var(--font-display);
+  font-size: clamp(60px, 5.7vw, 84px);
   font-weight: 900;
-  line-height: 0.98;
-  letter-spacing: -0.055em;
+  line-height: 0.92;
+  letter-spacing: -0.06em;
   text-align: center;
   text-wrap: balance;
 }
@@ -5552,6 +5553,10 @@ body {
     padding-inline: 20px;
   }
 
+  .cdek-hiring-map__title {
+    font-size: clamp(58px, 7vw, 76px);
+  }
+
   .cdek-hiring-map__stage {
     grid-template-columns: minmax(0, 36fr) minmax(92px, 10fr) minmax(0, 54fr);
   }
@@ -5584,7 +5589,7 @@ body {
 
   .cdek-hiring-map__title {
     max-width: 700px;
-    font-size: clamp(40px, 8.5vw, 66px);
+    font-size: clamp(58px, 7vw, 76px);
   }
 
   .cdek-hiring-map__stage {
@@ -5634,14 +5639,21 @@ body {
   }
 }
 
+@media screen and (max-width: 720px) {
+  .cdek-hiring-map__title {
+    font-size: clamp(38px, 11vw, 48px);
+    line-height: 0.96;
+  }
+}
+
 @media screen and (max-width: 560px) {
   .cdek-hiring-map {
     padding: 48px 14px 58px;
   }
 
   .cdek-hiring-map__title {
-    font-size: clamp(36px, 11vw, 48px);
-    line-height: 1.02;
+    font-size: clamp(38px, 11vw, 48px);
+    line-height: 0.96;
   }
 
   .cdek-hiring-map__stage {
