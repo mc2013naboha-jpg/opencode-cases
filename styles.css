@@ -4589,25 +4589,24 @@ body {
   }
 }
 
-/* CDEK: poster-style company impact with centered product screenshot. */
+/* CDEK: reference-matched company impact. */
 #cdek-case .cdek-impact-poster {
   position: relative;
   overflow: hidden;
-  padding: clamp(72px, 7vw, 112px) clamp(20px, 4vw, 64px) clamp(80px, 8vw, 128px);
-  color: #111217;
-  background: #fffdf8;
-  font-family: Arial, Helvetica, sans-serif;
+  padding: clamp(64px, 5.5vw, 80px) clamp(48px, 4.5vw, 64px) clamp(72px, 6vw, 88px);
+  color: #101116;
+  background: #fffcf7;
+  font-family: var(--font-display);
 }
 
 #cdek-case .cdek-impact-poster .cdek-impact-poster__inner {
   position: relative;
   isolation: isolate;
   width: 100%;
+  max-width: 1560px;
   min-height: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
+  display: block;
+  margin: 0 auto;
   padding: 0;
   border: 0;
   border-radius: 0;
@@ -4617,57 +4616,76 @@ body {
 
 #cdek-case .cdek-impact-poster__title {
   position: relative;
-  z-index: 2;
-  max-width: 1180px;
-  margin: 0 auto clamp(64px, 6vw, 92px);
-  color: #111217;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(50px, 5.7vw, 86px);
-  font-weight: 900;
-  line-height: 0.98;
+  z-index: 3;
+  max-width: 1040px;
+  margin: 0 auto clamp(48px, 4vw, 56px);
+  color: #101116;
+  font-family: var(--font-display);
+  font-size: clamp(52px, 5vw, 76px);
+  font-weight: 800;
+  line-height: 0.96;
   letter-spacing: -0.055em;
   text-align: center;
-  text-wrap: balance;
 }
 
-#cdek-case .cdek-impact-poster__title span {
+#cdek-case .cdek-impact-poster__title-line,
+#cdek-case .cdek-impact-poster__title-highlight {
+  display: block;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+#cdek-case .cdek-impact-poster__title-highlight {
   position: relative;
   z-index: 0;
-  display: inline-block;
   padding: 0 0.08em 0.03em;
 }
 
-#cdek-case .cdek-impact-poster__title span::before {
+#cdek-case .cdek-impact-poster__title-highlight::before {
   position: absolute;
   z-index: -1;
-  inset: 5% -4% -3%;
+  inset: 8% -4% -2%;
   content: "";
-  background: #ff7b5c;
-  clip-path: polygon(4% 13%, 86% 0, 100% 23%, 96% 88%, 12% 100%, 0 74%);
-  transform: rotate(-1.2deg);
+  background: #ff765e;
+  clip-path: polygon(2% 11%, 91% 0, 100% 24%, 96% 88%, 7% 100%, 0 73%);
+  transform: rotate(-0.8deg);
+}
+
+#cdek-case .cdek-impact-poster__grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1.58fr) minmax(400px, 1fr);
+  gap: clamp(48px, 4vw, 64px);
+  align-items: start;
+}
+
+#cdek-case .cdek-impact-poster__visual {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  padding: 28px 24px 104px 28px;
+  border: 0;
+  background: transparent;
 }
 
 #cdek-case .cdek-impact-poster__media {
   position: relative;
   z-index: 2;
-  width: min(100%, 560px);
-  margin: 0 auto;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
-  animation: cdek-hiring-map-in 600ms 100ms ease-out both;
+  width: 100%;
+  padding: 22px;
+  border-radius: 28px;
+  background: #ddf7fa;
 }
 
 #cdek-case .cdek-impact-poster__media::before {
   position: absolute;
   z-index: -1;
-  inset: -16px -18px;
+  inset: 10px -12px -12px 10px;
   content: "";
-  border-radius: 26px;
-  background: #9eeff8;
-  transform: rotate(-1deg);
+  border-radius: 28px;
+  background: #eaf1ff;
+  transform: rotate(0.7deg);
 }
 
 #cdek-case .cdek-impact-poster__image {
@@ -4675,42 +4693,182 @@ body {
   z-index: 1;
   width: 100%;
   height: auto;
+  max-height: none;
   display: block;
   margin: 0;
-  border: 2px solid #111217;
-  border-radius: 20px;
+  border: 1px solid rgba(16, 17, 22, 0.7);
+  border-radius: 14px;
   background: #ffffff;
+  object-fit: contain;
   box-shadow: none;
 }
 
-#cdek-case .cdek-impact-poster__summary {
-  position: relative;
-  z-index: 3;
-  width: min(92%, 1020px);
-  margin: clamp(52px, 5vw, 76px) auto 0;
-  padding: clamp(34px, 4vw, 54px) clamp(32px, 5vw, 68px);
-  border-radius: 24px;
-  background: #b5ffc9;
-  transform: rotate(0.45deg);
-  animation: cdek-hiring-map-in 600ms 240ms ease-out both;
+#cdek-case .cdek-impact-poster__check-art,
+#cdek-case .cdek-impact-poster__merge-art,
+#cdek-case .cdek-impact-poster__dash-art,
+#cdek-case .cdek-impact-poster__card-art {
+  overflow: visible;
+  fill: none;
+  stroke: #101116;
+  stroke-width: 2.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-#cdek-case .cdek-impact-poster__summary .case-change__text {
-  max-width: 880px;
-  margin: 0 auto;
-  color: #111217;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(19px, 1.55vw, 23px);
-  font-weight: 500;
-  line-height: 1.55;
-  text-align: left;
+#cdek-case .cdek-impact-art__paper {
+  fill: #fffcf7;
+}
+
+#cdek-case .cdek-impact-art__mint {
+  fill: #78e5a5;
+}
+
+#cdek-case .cdek-impact-art__yellow {
+  fill: #ffd95a;
+}
+
+#cdek-case .cdek-impact-art__blue {
+  fill: #8d82f6;
+}
+
+#cdek-case .cdek-impact-poster__check-art {
+  position: absolute;
+  z-index: 4;
+  top: -14px;
+  left: -28px;
+  width: 112px;
+}
+
+#cdek-case .cdek-impact-poster__merge-art {
+  position: absolute;
+  z-index: 4;
+  right: 24px;
+  bottom: 0;
+  width: min(42%, 310px);
+}
+
+#cdek-case .cdek-impact-poster__dash-art {
+  position: absolute;
+  z-index: 1;
+  left: 70px;
+  bottom: 16px;
+  width: min(38%, 280px);
+}
+
+#cdek-case .cdek-impact-poster__database-label {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  bottom: 18px;
+  display: inline-block;
+  padding: 8px 17px;
+  color: #101116;
+  background: #dfe2ff;
+  border: 1.5px solid #101116;
+  border-radius: 4px;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1;
+  transform: rotate(-5deg);
+}
+
+#cdek-case .cdek-impact-poster__content {
+  min-width: 0;
+}
+
+#cdek-case .cdek-impact-poster__intro,
+#cdek-case .cdek-impact-poster__conclusion {
+  margin: 0;
+  color: #20232a;
+  font-family: var(--font-display);
+  font-size: clamp(18px, 1.35vw, 20px);
+  font-weight: 400;
+  line-height: 1.52;
+}
+
+#cdek-case .cdek-impact-poster__cards {
+  display: grid;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+#cdek-case .cdek-impact-poster__card {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 128px minmax(0, 1fr);
+  gap: 22px;
+  align-items: center;
+  padding: 24px 26px;
+  border: 0;
+  border-radius: 22px;
+  box-shadow: none;
+}
+
+#cdek-case .cdek-impact-poster__card--database {
+  background: #ddf8e8;
+}
+
+#cdek-case .cdek-impact-poster__card--speed {
+  background: #fff3c4;
+}
+
+#cdek-case .cdek-impact-poster__card--offices {
+  background: #eaf1ff;
+}
+
+#cdek-case .cdek-impact-poster__card-art {
+  width: 100%;
+  max-width: 128px;
+  height: auto;
+}
+
+#cdek-case .cdek-impact-poster__card h4 {
+  margin: 0;
+  color: #101116;
+  font-family: var(--font-display);
+  font-size: clamp(22px, 1.7vw, 26px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+#cdek-case .cdek-impact-poster__card p {
+  margin: 9px 0 0;
+  color: #252830;
+  font-family: var(--font-display);
+  font-size: clamp(16px, 1.2vw, 18px);
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+#cdek-case .cdek-impact-poster__manual-label {
+  display: inline-block;
+  width: fit-content;
+  margin: 26px 0 0;
+  padding: 8px 18px;
+  color: #101116;
+  background: #ff765e;
+  clip-path: polygon(3% 12%, 91% 0, 100% 25%, 96% 88%, 8% 100%, 0 72%);
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.1;
+  transform: rotate(-1deg);
+}
+
+#cdek-case .cdek-impact-poster__conclusion {
+  margin-top: 22px;
+  font-size: clamp(17px, 1.25vw, 19px);
 }
 
 #cdek-case .cdek-impact-poster__decor {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   fill: none;
-  stroke: #111217;
+  stroke: #101116;
   stroke-width: 5;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -4718,75 +4876,175 @@ body {
 }
 
 #cdek-case .cdek-impact-poster__decor--star {
-  top: 0;
-  left: 1%;
-  width: clamp(40px, 4vw, 62px);
+  top: 26px;
+  left: 12%;
+  width: clamp(40px, 4vw, 60px);
 }
 
 #cdek-case .cdek-impact-poster__decor--rays {
-  top: 1%;
-  right: 0;
-  width: clamp(56px, 5vw, 82px);
+  top: 34px;
+  right: 12%;
+  width: clamp(54px, 5vw, 78px);
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 1280px) and (min-width: 1024px) {
   #cdek-case .cdek-impact-poster {
-    padding: 60px 20px 72px;
+    padding: 64px 36px 76px;
+  }
+
+  #cdek-case .cdek-impact-poster__grid {
+    grid-template-columns: minmax(0, 1.45fr) minmax(360px, 1fr);
+    gap: 36px;
   }
 
   #cdek-case .cdek-impact-poster__title {
-    margin-bottom: 54px;
-    font-size: clamp(42px, 8vw, 64px);
+    font-size: clamp(48px, 4.7vw, 64px);
   }
 
-  #cdek-case .cdek-impact-poster__media::before {
-    inset: -10px;
-    border-radius: 22px;
+  #cdek-case .cdek-impact-poster__visual {
+    padding-inline: 14px;
   }
 
-  #cdek-case .cdek-impact-poster__image {
-    border-radius: 16px;
+  #cdek-case .cdek-impact-poster__media {
+    padding: 17px;
   }
 
-  #cdek-case .cdek-impact-poster__summary {
-    width: 94%;
-    margin-top: 46px;
+  #cdek-case .cdek-impact-poster__card {
+    grid-template-columns: 102px minmax(0, 1fr);
+    gap: 18px;
+    padding: 22px;
+  }
+
+  #cdek-case .cdek-impact-poster__card-art {
+    max-width: 104px;
   }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 1023px) {
   #cdek-case .cdek-impact-poster {
-    padding: 48px 14px 58px;
+    padding: 64px 32px 76px;
+  }
+
+  #cdek-case .cdek-impact-poster__grid {
+    grid-template-columns: 1fr;
+    gap: 52px;
+  }
+
+  #cdek-case .cdek-impact-poster__visual {
+    padding-bottom: 108px;
+  }
+
+  #cdek-case .cdek-impact-poster__content {
+    max-width: 900px;
+    margin-inline: auto;
+  }
+
+  #cdek-case .cdek-impact-poster__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #cdek-case .cdek-impact-poster__card {
+    grid-template-columns: 110px minmax(0, 1fr);
+  }
+
+  #cdek-case .cdek-impact-poster__card--offices {
+    grid-column: 1 / -1;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #cdek-case .cdek-impact-poster {
+    padding: 54px 18px 66px;
   }
 
   #cdek-case .cdek-impact-poster__title {
-    margin-bottom: 38px;
-    font-size: clamp(36px, 10.5vw, 46px);
-    line-height: 1.02;
+    margin-bottom: 42px;
+    font-size: clamp(36px, 11vw, 48px);
+    line-height: 0.98;
+  }
+
+  #cdek-case .cdek-impact-poster__grid {
+    gap: 40px;
+  }
+
+  #cdek-case .cdek-impact-poster__visual {
+    padding: 16px 8px 82px;
+  }
+
+  #cdek-case .cdek-impact-poster__media {
+    padding: 12px;
+    border-radius: 20px;
   }
 
   #cdek-case .cdek-impact-poster__media::before {
-    inset: -7px;
-    border-radius: 17px;
-    transform: rotate(-0.7deg);
+    inset: 6px -7px -7px 6px;
+    border-radius: 20px;
   }
 
   #cdek-case .cdek-impact-poster__image {
-    border-width: 1.5px;
-    border-radius: 12px;
+    border-radius: 10px;
   }
 
-  #cdek-case .cdek-impact-poster__summary {
-    width: 100%;
-    margin-top: 34px;
-    padding: 28px 24px;
-    border-radius: 19px;
-    transform: none;
+  #cdek-case .cdek-impact-poster__check-art {
+    top: -18px;
+    left: -10px;
+    width: 82px;
   }
 
-  #cdek-case .cdek-impact-poster__summary .case-change__text {
-    font-size: 17px;
-    line-height: 1.55;
+  #cdek-case .cdek-impact-poster__merge-art {
+    right: 2px;
+    width: min(52%, 210px);
+  }
+
+  #cdek-case .cdek-impact-poster__dash-art {
+    left: 44px;
+    bottom: 12px;
+    width: 42%;
+  }
+
+  #cdek-case .cdek-impact-poster__database-label {
+    left: 2px;
+    bottom: 14px;
+    padding: 7px 13px;
+    font-size: 15px;
+  }
+
+  #cdek-case .cdek-impact-poster__intro,
+  #cdek-case .cdek-impact-poster__conclusion {
+    font-size: 16px;
+    line-height: 1.52;
+  }
+
+  #cdek-case .cdek-impact-poster__cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 28px;
+  }
+
+  #cdek-case .cdek-impact-poster__card,
+  #cdek-case .cdek-impact-poster__card--offices {
+    grid-column: auto;
+    grid-template-columns: 94px minmax(0, 1fr);
+    gap: 18px;
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  #cdek-case .cdek-impact-poster__card-art {
+    max-width: 94px;
+  }
+
+  #cdek-case .cdek-impact-poster__card h4 {
+    font-size: clamp(20px, 5.6vw, 22px);
+  }
+
+  #cdek-case .cdek-impact-poster__card p {
+    font-size: 16px;
+  }
+
+  #cdek-case .cdek-impact-poster__manual-label {
+    margin-top: 24px;
+    font-size: 16px;
   }
 
   #cdek-case .cdek-impact-poster__decor {
@@ -4794,10 +5052,19 @@ body {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  #cdek-case .cdek-impact-poster__media,
-  #cdek-case .cdek-impact-poster__summary {
-    animation: none;
+@media screen and (max-width: 430px) {
+  #cdek-case .cdek-impact-poster__card,
+  #cdek-case .cdek-impact-poster__card--offices {
+    grid-template-columns: 1fr;
+  }
+
+  #cdek-case .cdek-impact-poster__card-art {
+    width: 82px;
+    justify-self: start;
+  }
+
+  #cdek-case .cdek-impact-poster__merge-art {
+    width: 180px;
   }
 }
 
