@@ -4801,6 +4801,361 @@ body {
   }
 }
 
+/* CDEK: reference-matched case hero. */
+#cdek-case .cdek-hero-poster {
+  position: relative;
+  width: 100%;
+  max-width: 1560px;
+  display: grid;
+  grid-template-columns: minmax(0, 2.25fr) minmax(340px, 0.95fr);
+  gap: clamp(48px, 4.2vw, 64px);
+  align-items: stretch;
+  margin: 0 auto;
+  padding: clamp(64px, 5.5vw, 80px) 48px;
+  border: 0;
+  background: #fffcf7;
+  font-family: var(--font-display);
+}
+
+#cdek-case .cdek-hero-poster__main {
+  min-width: 0;
+}
+
+#cdek-case .cdek-hero-poster__eyebrow {
+  display: inline-flex;
+  width: fit-content;
+  margin: 0 0 clamp(28px, 2.5vw, 36px);
+  padding: 10px 20px;
+  border-radius: 999px;
+  color: #ffffff;
+  background: #3d8bff;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+#cdek-case .cdek-hero-poster__title {
+  position: relative;
+  z-index: 1;
+  max-width: 1060px;
+  margin: 0;
+  color: #101116;
+  font-family: var(--font-display);
+  font-size: clamp(48px, 3.6vw, 68px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.055em;
+  text-wrap: balance;
+}
+
+#cdek-case .cdek-hero-poster__marker {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  padding-inline: 0.04em;
+  white-space: nowrap;
+}
+
+#cdek-case .cdek-hero-poster__marker::before {
+  position: absolute;
+  z-index: -1;
+  inset: 24% -4% 1%;
+  content: "";
+  background: #ffd95a;
+  clip-path: polygon(2% 10%, 92% 0, 100% 25%, 96% 90%, 7% 100%, 0 75%);
+  transform: rotate(-0.8deg);
+}
+
+#cdek-case .cdek-hero-poster__marker + .cdek-hero-poster__marker::before {
+  transform: rotate(0.7deg);
+}
+
+#cdek-case .cdek-hero-poster__route,
+#cdek-case .cdek-hero-poster__fact-art {
+  overflow: visible;
+  fill: none;
+  stroke: #101116;
+  stroke-width: 2.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#cdek-case .cdek-hero-poster__route {
+  width: 100%;
+  max-width: 1040px;
+  height: auto;
+  display: block;
+  margin: clamp(28px, 3vw, 42px) 0 0;
+}
+
+#cdek-case .cdek-hero-art__paper {
+  fill: #fffcf7;
+}
+
+#cdek-case .cdek-hero-art__blue {
+  fill: #8d82f6;
+}
+
+#cdek-case .cdek-hero-art__lavender {
+  fill: #9296f6;
+}
+
+#cdek-case .cdek-hero-art__mint {
+  fill: #78e5a5;
+}
+
+#cdek-case .cdek-hero-art__yellow {
+  fill: #ffd95a;
+}
+
+#cdek-case .cdek-hero-art__route-line {
+  stroke-dasharray: 8 10;
+}
+
+#cdek-case .cdek-hero-poster__lead {
+  max-width: 1080px;
+  margin: clamp(24px, 2.5vw, 32px) 0 0;
+  color: #30333a;
+  font-family: var(--font-display);
+  font-size: clamp(18px, 1.35vw, 20px);
+  font-weight: 400;
+  line-height: 1.58;
+}
+
+#cdek-case .cdek-hero-poster__facts {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(18px, 1.7vw, 24px);
+  align-content: stretch;
+  padding: 0;
+}
+
+#cdek-case .cdek-hero-poster__fact,
+#cdek-case .cdek-hero-poster__fact:nth-child(1),
+#cdek-case .cdek-hero-poster__fact:nth-child(2),
+#cdek-case .cdek-hero-poster__fact:nth-child(3) {
+  position: relative;
+  min-width: 0;
+  min-height: 190px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 132px;
+  gap: 16px;
+  align-items: center;
+  padding: clamp(28px, 2.5vw, 36px);
+  border: 0;
+  border-radius: 24px;
+  box-shadow: none;
+  animation: cdek-hiring-map-in 500ms ease-out both;
+}
+
+#cdek-case .cdek-hero-poster__fact--period {
+  background: #fff3c4;
+}
+
+#cdek-case .cdek-hero-poster__fact--growth {
+  background: #ddf8e8;
+  animation-delay: 80ms;
+}
+
+#cdek-case .cdek-hero-poster__fact--search {
+  background: #eaf1ff;
+  animation-delay: 160ms;
+}
+
+#cdek-case .cdek-hero-poster__fact-copy {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+#cdek-case .cdek-hero-poster__fact strong {
+  display: block;
+  margin: 0;
+  color: #24a65a;
+  font-family: var(--font-display);
+  font-size: clamp(40px, 3vw, 50px);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+  white-space: nowrap;
+}
+
+#cdek-case .cdek-hero-poster__fact--growth strong {
+  font-size: clamp(32px, 2.45vw, 43px);
+}
+
+#cdek-case .cdek-hero-poster__fact span {
+  display: block;
+  margin: 14px 0 0;
+  color: #30333a;
+  font-family: var(--font-display);
+  font-size: clamp(15px, 1.15vw, 17px);
+  font-weight: 500;
+  line-height: 1.42;
+}
+
+#cdek-case .cdek-hero-poster__fact-art {
+  width: 100%;
+  max-width: 142px;
+  height: auto;
+  justify-self: end;
+}
+
+#cdek-case .cdek-hero-poster__fact--growth .cdek-hero-poster__fact-art {
+  max-width: 150px;
+}
+
+@media screen and (max-width: 1280px) and (min-width: 1024px) {
+  #cdek-case .cdek-hero-poster {
+    grid-template-columns: minmax(0, 1.95fr) minmax(310px, 0.95fr);
+    gap: 36px;
+    padding-inline: 36px;
+  }
+
+  #cdek-case .cdek-hero-poster__title {
+    font-size: clamp(42px, 3.8vw, 54px);
+  }
+
+  #cdek-case .cdek-hero-poster__fact,
+  #cdek-case .cdek-hero-poster__fact:nth-child(1),
+  #cdek-case .cdek-hero-poster__fact:nth-child(2),
+  #cdek-case .cdek-hero-poster__fact:nth-child(3) {
+    grid-template-columns: minmax(0, 1fr) 104px;
+    min-height: 176px;
+    padding: 26px 24px;
+  }
+
+  #cdek-case .cdek-hero-poster__fact strong {
+    font-size: clamp(34px, 3vw, 42px);
+  }
+
+  #cdek-case .cdek-hero-poster__fact--growth strong {
+    font-size: clamp(28px, 2.6vw, 34px);
+  }
+
+  #cdek-case .cdek-hero-poster__fact span {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  #cdek-case .cdek-hero-poster {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 64px 32px;
+  }
+
+  #cdek-case .cdek-hero-poster__title {
+    max-width: 900px;
+    font-size: clamp(44px, 6.6vw, 62px);
+  }
+
+  #cdek-case .cdek-hero-poster__route {
+    max-width: 900px;
+  }
+
+  #cdek-case .cdek-hero-poster__facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #cdek-case .cdek-hero-poster__fact--search {
+    grid-column: 1 / -1;
+  }
+
+  #cdek-case .cdek-hero-poster__fact,
+  #cdek-case .cdek-hero-poster__fact:nth-child(1),
+  #cdek-case .cdek-hero-poster__fact:nth-child(2),
+  #cdek-case .cdek-hero-poster__fact:nth-child(3) {
+    grid-template-columns: minmax(0, 1fr) 132px;
+    min-height: 190px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #cdek-case .cdek-hero-poster {
+    gap: 40px;
+    padding: 52px 18px 60px;
+  }
+
+  #cdek-case .cdek-hero-poster__eyebrow {
+    margin-bottom: 24px;
+    padding: 9px 16px;
+    font-size: 13px;
+  }
+
+  #cdek-case .cdek-hero-poster__title {
+    font-size: clamp(36px, 11vw, 48px);
+    line-height: 1;
+  }
+
+  #cdek-case .cdek-hero-poster__route {
+    margin-top: 30px;
+  }
+
+  #cdek-case .cdek-hero-poster__lead {
+    margin-top: 24px;
+    font-size: clamp(16px, 4.3vw, 17px);
+    line-height: 1.55;
+  }
+
+  #cdek-case .cdek-hero-poster__facts {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  #cdek-case .cdek-hero-poster__fact--search {
+    grid-column: auto;
+  }
+
+  #cdek-case .cdek-hero-poster__fact,
+  #cdek-case .cdek-hero-poster__fact:nth-child(1),
+  #cdek-case .cdek-hero-poster__fact:nth-child(2),
+  #cdek-case .cdek-hero-poster__fact:nth-child(3) {
+    grid-template-columns: minmax(0, 1fr) 108px;
+    min-height: 170px;
+    padding: 28px 24px;
+    border-radius: 22px;
+  }
+
+  #cdek-case .cdek-hero-poster__fact strong,
+  #cdek-case .cdek-hero-poster__fact--growth strong {
+    font-size: clamp(34px, 10vw, 42px);
+  }
+
+  #cdek-case .cdek-hero-poster__fact span {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  #cdek-case .cdek-hero-poster {
+    padding-inline: 18px;
+  }
+
+  #cdek-case .cdek-hero-poster__fact,
+  #cdek-case .cdek-hero-poster__fact:nth-child(1),
+  #cdek-case .cdek-hero-poster__fact:nth-child(2),
+  #cdek-case .cdek-hero-poster__fact:nth-child(3) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  #cdek-case .cdek-hero-poster__fact-art {
+    width: min(48%, 132px);
+    justify-self: end;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #cdek-case .cdek-hero-poster__fact {
+    animation: none;
+  }
+}
+
 /* CDEK: reference-matched five-month results. */
 #cdek-case .cdek-results-poster {
   position: relative;
