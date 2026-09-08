@@ -9314,7 +9314,7 @@ body {
 
 #pivaldi-case .pivaldi-steps-poster__box { max-width: 1360px; margin: 0 auto; padding: 0; }
 #pivaldi-case .pivaldi-steps-poster__title { max-width: 860px; margin: 0; color: #101116; font-family: var(--font-display); font-size: clamp(44px, 4.1vw, 66px); font-weight: 900; line-height: 0.95; letter-spacing: -0.055em; }
-#pivaldi-case .pivaldi-steps-poster__box > .case-story__lead { max-width: 840px; margin: 28px 0 0; color: #30333a; font-family: var(--font-display); font-size: clamp(17px, 1.3vw, 20px); font-weight: 500; line-height: 1.5; }
+#pivaldi-case .pivaldi-steps-poster__box > .case-story__lead { max-width: 840px; margin: 28px auto 0; color: #30333a; font-family: var(--font-display); font-size: clamp(17px, 1.3vw, 20px); font-weight: 500; line-height: 1.5; text-align: center; }
 
 #pivaldi-case .pivaldi-steps-poster__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin: clamp(44px, 5vw, 70px) 0 32px; }
 #pivaldi-case .pivaldi-steps-poster__step,
@@ -9326,7 +9326,7 @@ body {
 #pivaldi-case .pivaldi-steps-poster__art { width: 140px; max-width: 100%; height: auto; margin-bottom: 24px; }
 #pivaldi-case .pivaldi-steps-poster__step h4 { margin: 0 0 16px; color: #101116; font-family: var(--font-display); font-size: clamp(21px, 1.7vw, 27px); font-weight: 800; line-height: 1.05; letter-spacing: -0.035em; }
 #pivaldi-case .pivaldi-steps-poster__step p { margin: 0; color: #101116; font-family: var(--font-display); font-size: 16px; font-weight: 500; line-height: 1.45; }
-#pivaldi-case .pivaldi-steps-poster__box > .case-story__note { max-width: 1080px; margin: 0; padding: 24px 28px; border-radius: 20px; color: #101116; background: #ffe5df; font-family: var(--font-display); font-size: 17px; font-weight: 600; line-height: 1.48; }
+#pivaldi-case .pivaldi-steps-poster__box > .case-story__note { max-width: 1080px; margin: 18px auto 0; padding: 24px 28px; border-radius: 20px; color: #101116; background: #ffe5df; font-family: var(--font-display); font-size: 17px; font-weight: 600; line-height: 1.48; text-align: center; }
 
 #pivaldi-case .pivaldi-partnership { padding: clamp(72px, 7vw, 110px) clamp(24px, 4vw, 64px); border: 0; background: #fffcf7; }
 #pivaldi-case .pivaldi-partnership__box { max-width: 1360px; display: grid; grid-template-columns: minmax(250px, 0.7fr) minmax(190px, 0.42fr) minmax(0, 1fr); gap: clamp(30px, 5vw, 72px); align-items: center; margin: 0 auto; padding: clamp(32px, 4vw, 58px); border-radius: 30px; background: #eae7ff; }
