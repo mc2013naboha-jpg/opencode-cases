@@ -9479,6 +9479,211 @@ body {
   #pivaldi-case .pivaldi-hero-poster__fact strong { white-space: normal; }
 }
 
+/* Radisson Rosa Khutor: illustrated case system sharing the CDEK poster language. */
+#radisson-case .case-detail--radisson { overflow: hidden; color: #101116; background: #fffcf7; font-family: var(--font-display); }
+#radisson-case .radisson-hero-poster { display: grid; grid-template-columns: minmax(0, 2.05fr) minmax(320px, 0.95fr); gap: clamp(42px, 5vw, 76px); align-items: stretch; padding: clamp(64px, 6vw, 88px) clamp(24px, 4vw, 64px); border: 0; background: #fffcf7; }
+#radisson-case .radisson-hero-poster__main,
+#radisson-case .radisson-journey__tasks,
+#radisson-case .radisson-journey__solutions,
+#radisson-case .radisson-impact-poster__story { min-width: 0; }
+
+#radisson-case .radisson-hero-poster__eyebrow,
+#radisson-case .radisson-journey__label,
+#radisson-case .radisson-results-poster .case-results__tag,
+#radisson-case .radisson-impact-poster__content > span { display: inline-flex; width: fit-content; margin: 0 0 28px; padding: 10px 18px; border: 0; border-radius: 999px; color: #ffffff; background: #3d8bff; font-family: var(--font-display); font-size: 14px; font-weight: 800; line-height: 1; letter-spacing: 0.04em; text-transform: uppercase; }
+
+#radisson-case .radisson-hero-poster__title { max-width: 940px; margin: 0; color: #101116; font-family: var(--font-display); font-size: clamp(48px, 4.2vw, 70px); font-weight: 800; line-height: 0.98; letter-spacing: -0.055em; text-wrap: balance; }
+#radisson-case .radisson-hero-poster__title span,
+#radisson-case .radisson-results-poster .case-results__title span,
+#radisson-case .radisson-impact-poster .case-change__title em { position: relative; z-index: 0; display: inline-block; padding-inline: 0.05em; font-style: normal; white-space: nowrap; }
+#radisson-case .radisson-hero-poster__title span::before,
+#radisson-case .radisson-results-poster .case-results__title span::before,
+#radisson-case .radisson-impact-poster .case-change__title em::before { position: absolute; z-index: -1; inset: 24% -4% 0; content: ""; background: #ffd95a; clip-path: polygon(2% 10%, 92% 0, 100% 28%, 96% 92%, 7% 100%, 0 74%); transform: rotate(-1deg); }
+
+#radisson-case .radisson-hero-poster__route,
+#radisson-case .radisson-hero-poster__fact-art,
+#radisson-case .radisson-journey__route svg,
+#radisson-case .radisson-results-poster__hero-art,
+#radisson-case .radisson-metric__art,
+#radisson-case .radisson-impact-poster__art { overflow: visible; fill: none; stroke: #101116; stroke-width: 2.35; stroke-linecap: round; stroke-linejoin: round; }
+#radisson-case .radisson-art__paper { fill: #fffcf7; }
+#radisson-case .radisson-art__blue { fill: #98a7ff; }
+#radisson-case .radisson-art__lavender { fill: #e9e7ff; }
+#radisson-case .radisson-art__mint { fill: #78e5a5; }
+#radisson-case .radisson-art__yellow { fill: #ffd95a; }
+#radisson-case .radisson-art__coral { fill: #ff9b87; }
+#radisson-case .radisson-art__route { stroke-dasharray: 7 9; }
+#radisson-case .radisson-hero-poster__route { display: block; width: 100%; max-width: 900px; height: auto; margin-top: clamp(30px, 3.2vw, 46px); }
+#radisson-case .radisson-hero-poster__lead { max-width: 930px; margin: clamp(24px, 2.4vw, 34px) 0 0; color: #30333a; font-family: var(--font-display); font-size: clamp(18px, 1.35vw, 20px); font-weight: 500; line-height: 1.55; }
+
+#radisson-case .radisson-hero-poster__facts { display: grid; grid-template-columns: 1fr; gap: 20px; align-content: stretch; padding: 0; }
+#radisson-case .radisson-hero-poster__fact,
+#radisson-case .radisson-hero-poster__fact:nth-child(n) { position: relative; min-height: 184px; display: block; padding: 28px 132px 28px 28px; border: 0; border-radius: 24px; box-shadow: none; }
+#radisson-case .radisson-hero-poster__fact--period { background: #fff3c4; }
+#radisson-case .radisson-hero-poster__fact--ai { background: #ddf8e8; }
+#radisson-case .radisson-hero-poster__fact--funnels { background: #eaf1ff; }
+#radisson-case .radisson-hero-poster__fact strong { display: block; margin: 0; color: #101116; font-family: var(--font-display); font-size: clamp(34px, 2.8vw, 48px); font-weight: 800; line-height: 0.92; letter-spacing: -0.055em; white-space: nowrap; }
+#radisson-case .radisson-hero-poster__fact--ai strong { color: #178e4c; font-size: clamp(26px, 2.2vw, 36px); }
+#radisson-case .radisson-hero-poster__fact--funnels strong { font-size: clamp(26px, 2.1vw, 35px); }
+#radisson-case .radisson-hero-poster__fact span { display: block; margin: 13px 0 0; color: #30333a; font-family: var(--font-display); font-size: 15px; font-weight: 500; line-height: 1.38; }
+#radisson-case .radisson-hero-poster__fact-art { position: absolute; right: 22px; bottom: 22px; width: 108px; height: auto; }
+
+#radisson-case .radisson-journey { position: relative; overflow: hidden; padding: clamp(72px, 7vw, 112px) clamp(24px, 4vw, 64px); background: #fffcf7; }
+#radisson-case .radisson-journey__stage { max-width: 1360px; display: grid; grid-template-columns: minmax(300px, 0.9fr) 140px minmax(440px, 1.4fr); gap: clamp(24px, 3vw, 48px); align-items: start; margin: 0 auto; }
+#radisson-case .radisson-journey .case-block { padding: 0; border: 0; background: transparent; }
+#radisson-case .radisson-journey__label { margin-bottom: 24px; background: #3d8bff; }
+#radisson-case .radisson-journey__solutions .radisson-journey__label { background: #24a65a; }
+#radisson-case .radisson-journey__list { display: grid; gap: 16px; margin: 0; padding: 0; list-style: none; }
+#radisson-case .radisson-journey__list--task,
+#radisson-case .radisson-journey__list--solution { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+#radisson-case .radisson-journey__list li { position: relative; min-width: 0; min-height: 144px; display: flex; align-items: center; padding: 25px 22px 24px 48px; border: 0; border-radius: 22px; color: #101116; font-family: var(--font-display); font-size: clamp(15px, 1.14vw, 17px); font-weight: 600; line-height: 1.38; }
+#radisson-case .radisson-journey__list li::before { position: absolute; top: 26px; left: 22px; width: 11px; height: 11px; margin: 0; border-radius: 50%; background: #3d8bff; box-shadow: none; }
+#radisson-case .radisson-journey__list--task li:nth-child(1) { background: #ddf7fa; }
+#radisson-case .radisson-journey__list--task li:nth-child(2) { background: #eae7ff; }
+#radisson-case .radisson-journey__list--task li:nth-child(3) { background: #ffe5df; }
+#radisson-case .radisson-journey__list--task li:nth-child(4) { background: #fff3c4; }
+#radisson-case .radisson-journey__list--task li:nth-child(5) { grid-column: 1 / -1; background: #ddf8e8; }
+#radisson-case .radisson-journey__list--solution li:nth-child(1) { background: #ddf8e8; }
+#radisson-case .radisson-journey__list--solution li:nth-child(2) { background: #fff3c4; }
+#radisson-case .radisson-journey__list--solution li:nth-child(3) { background: #eaf1ff; }
+#radisson-case .radisson-journey__list--solution li:nth-child(4) { background: #eae7ff; }
+#radisson-case .radisson-journey__list--solution li:nth-child(5) { background: #ffe5df; }
+#radisson-case .radisson-journey__list--solution li:nth-child(6) { background: #ddf7fa; }
+#radisson-case .radisson-journey__list--solution li:nth-child(7) { background: #ddf8e8; }
+#radisson-case .radisson-journey__list--solution li:nth-child(8) { background: #eaf1ff; }
+#radisson-case .radisson-journey__list--solution li::before { width: 12px; height: 7px; border-bottom: 2px solid #24a65a; border-left: 2px solid #24a65a; border-radius: 0; background: transparent; transform: rotate(-45deg); }
+#radisson-case .radisson-journey__route { position: relative; min-height: 570px; display: grid; align-content: center; justify-items: center; padding-top: 44px; }
+#radisson-case .radisson-journey__route svg { width: 132px; height: auto; }
+#radisson-case .radisson-journey__route span { position: absolute; top: 50%; left: 50%; color: #ff765e; font-family: var(--font-display); font-size: 17px; font-style: italic; font-weight: 800; line-height: 0.95; text-align: center; transform: translate(-50%, 70px) rotate(-4deg); }
+
+#radisson-case .radisson-results-poster { overflow: hidden; padding: clamp(76px, 7vw, 112px) clamp(24px, 4vw, 64px) clamp(82px, 8vw, 120px); border: 0; background: #fffcf7; }
+#radisson-case .radisson-results-poster .case-results__head { max-width: 1360px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(250px, 0.55fr); gap: clamp(36px, 6vw, 86px); align-items: center; margin: 0 auto clamp(52px, 6vw, 80px); }
+#radisson-case .radisson-results-poster .case-results__tag { margin-bottom: 24px; background: #24a65a; }
+#radisson-case .radisson-results-poster .case-results__title { max-width: 720px; margin: 0; color: #101116; font-family: var(--font-display); font-size: clamp(54px, 5.5vw, 82px); font-weight: 900; line-height: 0.92; letter-spacing: -0.06em; }
+#radisson-case .radisson-results-poster__hero-art { width: 100%; max-width: 310px; justify-self: end; }
+#radisson-case .radisson-results-poster__grid { max-width: 1360px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-rows: minmax(240px, auto) minmax(218px, auto); gap: clamp(18px, 2.2vw, 30px); margin: 0 auto; }
+#radisson-case .radisson-results-poster .radisson-metric,
+#radisson-case .radisson-results-poster .radisson-metric:nth-child(n) { position: relative; min-width: 0; min-height: 0; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; padding: clamp(28px, 3vw, 40px); border: 0; border-radius: 24px; box-shadow: none; }
+#radisson-case .radisson-results-poster .metric-card__value { display: block; margin: 0 0 17px; color: #101116; font-family: var(--font-display); font-size: clamp(50px, 4.4vw, 70px); font-weight: 900; line-height: 0.88; letter-spacing: -0.065em; }
+#radisson-case .radisson-results-poster .metric-card__text { max-width: 330px; margin: 0; color: #101116; font-family: var(--font-display); font-size: clamp(16px, 1.25vw, 19px); font-weight: 600; line-height: 1.35; }
+#radisson-case .radisson-metric__art { width: 100%; max-width: 180px; }
+#radisson-case .radisson-metric--speed { grid-column: 1 / 8; grid-row: 1; display: grid !important; grid-template-columns: minmax(0, 0.85fr) minmax(170px, 1.15fr); align-items: center; gap: 22px; background: #eaf1ff; }
+#radisson-case .radisson-metric--speed .metric-card__value { color: #3d8bff; font-size: clamp(76px, 7.2vw, 108px); }
+#radisson-case .radisson-metric--speed .radisson-metric__art { max-width: 220px; justify-self: end; }
+#radisson-case .radisson-metric--load { grid-column: 8 / -1; grid-row: 1; background: #ddf8e8; }
+#radisson-case .radisson-metric--load .metric-card__value { color: #178e4c; }
+#radisson-case .radisson-metric--load .radisson-metric__art { position: absolute; right: 22px; bottom: 20px; width: 42%; }
+#radisson-case .radisson-metric--conversion { grid-column: 1 / 5; grid-row: 2; background: #fff3c4; }
+#radisson-case .radisson-metric--conversion .radisson-metric__art { position: absolute; right: 16px; bottom: 18px; width: 40%; }
+#radisson-case .radisson-metric--offer { grid-column: 5 / 10; grid-row: 2; background: #eae7ff; }
+#radisson-case .radisson-metric--offer .metric-card__value { color: #665ae6; }
+#radisson-case .radisson-metric--offer .radisson-metric__art { position: absolute; right: 17px; bottom: 17px; width: 38%; }
+#radisson-case .radisson-metric--search { grid-column: 10 / -1; grid-row: 2; background: #ddf7fa; }
+#radisson-case .radisson-metric--search .metric-card__value { color: #009fb8; }
+#radisson-case .radisson-metric--search .radisson-metric__art { position: absolute; right: 14px; bottom: 15px; width: 42%; }
+#radisson-case .radisson-metric--phone { grid-column: 1 / -1; grid-row: 3; min-height: 206px !important; display: grid !important; grid-template-columns: minmax(0, 1fr) minmax(180px, 0.7fr); align-items: center; background: #ffe5df; }
+#radisson-case .radisson-metric--phone .metric-card__value { color: #e45336; }
+#radisson-case .radisson-metric--phone .radisson-metric__art { max-width: 160px; justify-self: end; }
+
+#radisson-case .radisson-impact-poster { overflow: hidden; padding: clamp(72px, 7vw, 110px) clamp(24px, 4vw, 64px); border: 0; background: #fffcf7; }
+#radisson-case .radisson-impact-poster__inner { max-width: 1360px; display: grid; grid-template-columns: minmax(250px, 0.7fr) minmax(0, 1.3fr); gap: clamp(42px, 7vw, 110px); align-items: center; margin: 0 auto; padding: clamp(36px, 4vw, 58px); border-radius: 30px; background: #eaf1ff; }
+#radisson-case .radisson-impact-poster__content > span { margin-bottom: 22px; background: #24a65a; }
+#radisson-case .radisson-impact-poster .case-change__title { max-width: 440px; margin: 0; color: #101116; font-family: var(--font-display); font-size: clamp(42px, 4.15vw, 64px); font-weight: 900; line-height: 0.92; letter-spacing: -0.062em; }
+#radisson-case .radisson-impact-poster__assets { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; padding: 0; background: transparent; }
+#radisson-case .radisson-impact-poster__assets .radisson-tool { position: static; width: 64px; height: 64px; object-fit: contain; border-radius: 15px; box-shadow: none; }
+#radisson-case .radisson-impact-poster__story { display: grid; grid-template-columns: minmax(170px, 0.58fr) minmax(0, 1fr); gap: 28px; align-items: center; }
+#radisson-case .radisson-impact-poster__art { width: 100%; max-width: 280px; }
+#radisson-case .radisson-impact-poster .case-change__text { margin: 0; color: #30333a; font-family: var(--font-display); font-size: clamp(16px, 1.17vw, 18px); font-weight: 500; line-height: 1.5; }
+
+@media screen and (max-width: 1100px) {
+  #radisson-case .radisson-hero-poster { grid-template-columns: minmax(0, 1.65fr) minmax(290px, 0.9fr); gap: 36px; padding-inline: 34px; }
+  #radisson-case .radisson-hero-poster__title { font-size: clamp(44px, 4.7vw, 58px); }
+  #radisson-case .radisson-hero-poster__fact,
+  #radisson-case .radisson-hero-poster__fact:nth-child(n) { min-height: 172px; padding: 24px 104px 24px 24px; }
+  #radisson-case .radisson-hero-poster__fact-art { width: 86px; right: 16px; bottom: 18px; }
+  #radisson-case .radisson-journey__stage { grid-template-columns: minmax(240px, 0.85fr) 112px minmax(360px, 1.35fr); gap: 22px; }
+  #radisson-case .radisson-journey__list li { min-height: 156px; padding: 22px 18px 22px 42px; font-size: 15px; }
+  #radisson-case .radisson-journey__list li::before { left: 18px; }
+  #radisson-case .radisson-results-poster__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; }
+  #radisson-case .radisson-results-poster .radisson-metric,
+  #radisson-case .radisson-metric--speed,
+  #radisson-case .radisson-metric--load,
+  #radisson-case .radisson-metric--conversion,
+  #radisson-case .radisson-metric--offer,
+  #radisson-case .radisson-metric--search,
+  #radisson-case .radisson-metric--phone { grid-column: auto; grid-row: auto; min-height: 248px !important; }
+  #radisson-case .radisson-metric--speed { grid-column: 1 / -1; min-height: 290px !important; }
+}
+
+@media screen and (max-width: 900px) {
+  #radisson-case .radisson-hero-poster { grid-template-columns: 1fr; gap: 42px; padding: 62px 30px; }
+  #radisson-case .radisson-hero-poster__facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #radisson-case .radisson-hero-poster__fact--funnels { grid-column: 1 / -1; }
+  #radisson-case .radisson-journey__stage { grid-template-columns: 1fr; gap: 38px; }
+  #radisson-case .radisson-journey__route { order: 2; height: 160px; min-height: 160px; padding: 0; }
+  #radisson-case .radisson-journey__tasks { order: 1; }
+  #radisson-case .radisson-journey__solutions { order: 3; }
+  #radisson-case .radisson-journey__route svg { position: absolute; top: 50%; left: 50%; width: 150px; height: auto; transform: translate(-50%, -50%) rotate(-90deg); }
+  #radisson-case .radisson-journey__route span { transform: translate(-50%, 25px) rotate(-4deg); }
+  #radisson-case .radisson-results-poster .case-results__head { grid-template-columns: 1fr; gap: 24px; }
+  #radisson-case .radisson-results-poster__hero-art { justify-self: start; width: min(100%, 300px); }
+  #radisson-case .radisson-impact-poster__inner { grid-template-columns: 1fr; gap: 42px; }
+}
+
+@media screen and (max-width: 767px) {
+  #radisson-case .radisson-hero-poster { padding: 52px 18px 58px; }
+  #radisson-case .radisson-hero-poster__eyebrow,
+  #radisson-case .radisson-journey__label,
+  #radisson-case .radisson-results-poster .case-results__tag,
+  #radisson-case .radisson-impact-poster__content > span { padding: 9px 15px; font-size: 12px; }
+  #radisson-case .radisson-hero-poster__title { font-size: clamp(38px, 11vw, 50px); }
+  #radisson-case .radisson-hero-poster__lead { font-size: 16px; }
+  #radisson-case .radisson-hero-poster__facts { grid-template-columns: 1fr; }
+  #radisson-case .radisson-hero-poster__fact--funnels { grid-column: auto; }
+  #radisson-case .radisson-journey,
+  #radisson-case .radisson-results-poster,
+  #radisson-case .radisson-impact-poster { padding-left: 18px; padding-right: 18px; }
+  #radisson-case .radisson-journey__list--task,
+  #radisson-case .radisson-journey__list--solution { grid-template-columns: 1fr; }
+  #radisson-case .radisson-journey__list--task li:nth-child(5) { grid-column: auto; }
+  #radisson-case .radisson-journey__list li { min-height: 0; padding: 24px 20px 24px 46px; font-size: 16px; }
+  #radisson-case .radisson-journey__route { height: 138px; min-height: 138px; }
+  #radisson-case .radisson-journey__route svg { width: 115px; }
+  #radisson-case .radisson-results-poster .case-results__head { margin-bottom: 42px; }
+  #radisson-case .radisson-results-poster .case-results__title { font-size: clamp(42px, 12vw, 52px); }
+  #radisson-case .radisson-results-poster__grid { grid-template-columns: 1fr; gap: 18px; }
+  #radisson-case .radisson-results-poster .radisson-metric,
+  #radisson-case .radisson-metric--speed,
+  #radisson-case .radisson-metric--load,
+  #radisson-case .radisson-metric--conversion,
+  #radisson-case .radisson-metric--offer,
+  #radisson-case .radisson-metric--search,
+  #radisson-case .radisson-metric--phone { grid-column: 1; min-height: 0 !important; padding: 30px 24px; }
+  #radisson-case .radisson-metric--speed,
+  #radisson-case .radisson-metric--phone { display: grid !important; grid-template-columns: 1fr; min-height: 290px !important; }
+  #radisson-case .radisson-results-poster .metric-card__value,
+  #radisson-case .radisson-metric--speed .metric-card__value { font-size: clamp(62px, 20vw, 84px); }
+  #radisson-case .radisson-results-poster .metric-card__text { max-width: 100%; font-size: 16px; }
+  #radisson-case .radisson-metric__art,
+  #radisson-case .radisson-metric--load .radisson-metric__art,
+  #radisson-case .radisson-metric--conversion .radisson-metric__art,
+  #radisson-case .radisson-metric--offer .radisson-metric__art,
+  #radisson-case .radisson-metric--search .radisson-metric__art { position: static; width: min(65%, 210px); margin: 4px 0 0 auto; }
+  #radisson-case .radisson-impact-poster__inner { padding: 32px 24px; border-radius: 24px; }
+  #radisson-case .radisson-impact-poster .case-change__title { font-size: clamp(42px, 11vw, 54px); }
+  #radisson-case .radisson-impact-poster__story { grid-template-columns: 1fr; }
+  #radisson-case .radisson-impact-poster__art { width: min(100%, 250px); }
+}
+
+@media screen and (max-width: 430px) {
+  #radisson-case .radisson-hero-poster__title span,
+  #radisson-case .radisson-impact-poster .case-change__title em { white-space: normal; }
+  #radisson-case .radisson-hero-poster__fact,
+  #radisson-case .radisson-hero-poster__fact:nth-child(n) { padding-right: 24px; }
+  #radisson-case .radisson-hero-poster__fact-art { position: static; display: block; width: min(44%, 108px); margin: 18px 0 0 auto; }
+  #radisson-case .radisson-hero-poster__fact strong { white-space: normal; }
+}
+
 /* Final hero results card layout. */
 .cases-intro__clouds {
   position: relative;
