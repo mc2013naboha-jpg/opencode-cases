@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кейсы клиентов WorkHere</title>
   <meta name="description" content="Реальные истории компаний, которые ускорили найм и снизили затраты с помощью ATS WorkHere.">
-  <link rel="stylesheet" href="styles.css?v=main-style-87">
+  <link rel="stylesheet" href="styles.css?v=main-style-89">
   <style>#haval-case .haval-hero-poster__route{display:none!important} #haval-case .haval-hero-poster__route-new{display:block!important}</style>
 </head>
 <body>
@@ -26,7 +26,7 @@
         <div class="header__actions">
           <a class="header__login" href="#">Войти</a>
           <div class="header__button">
-            <a class="button button--primary" href="#demo-request">Оставить заявку на демо</a>
+<a class="button button--primary" href="#demo-request">Оставить заявку на демо</a>
           </div>
           <button class="header__burger-btn" type="button" aria-label="Открыть меню" aria-controls="mobile-menu" aria-expanded="false">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -51,7 +51,7 @@
       </nav>
       <div class="mobile-menu__actions">
         <a class="button button--secondary" href="#">Войти</a>
-        <a class="button button--primary" href="#demo-request">Оставить заявку на демо</a>
+<a class="button button--primary" href="#demo-request">Оставить заявку на демо</a>
       </div>
     </div>
   </div>
@@ -894,17 +894,19 @@
       </div>
     </section>
 
-    <section class="cases-page__cta" id="demo-request" aria-labelledby="cta-title" hidden>
-      <div class="cases-page__inner">
-        <div class="cta-panel">
-          <div class="cta-panel__content">
-            <h2 class="cta-panel__title" id="cta-title">Расскажите нам о своей задаче</h2>
-            <p class="cta-panel__text">Покажем, какие процессы можно автоматизировать и где WorkHere поможет ускорить подбор.</p>
-          </div>
-          <a class="button button--primary" href="mailto:demo@workhere.ru?subject=Запись%20на%20демо%20WorkHere">Записаться на демо</a>
-        </div>
-      </div>
-    </section>
+<section class="cases-page__cta demo-inline-section" id="demo-request" aria-labelledby="cta-title">
+ <div class="demo-inline">
+  <h2 id="cta-title">Закажите персональное демо</h2>
+  <p class="demo-inline__intro">Оставьте заявку — мы покажем, как WorkHere поможет улучшить ваш подбор</p>
+  <form id="demo-inline-form" class="demo-inline__form">
+   <label><span class="demo-inline__sr">Телефон</span><input name="phone" type="tel" autocomplete="tel" placeholder="Телефон" required maxlength="30"></label>
+   <label><span class="demo-inline__sr">Ваша электронная почта</span><input name="email" type="email" autocomplete="email" placeholder="Ваша эл. почта" required maxlength="180"></label>
+   <button class="button button--primary" type="submit">Оставить заявку</button>
+   <p class="demo-inline__status" role="status" aria-live="polite"></p>
+  </form>
+  <ul class="demo-inline__benefits"><li>Бесплатная консультация</li><li>Ответим в течение 15 минут</li><li>Без обязательств</li></ul>
+ </div>
+</section>
   </main>
 
   <footer class="footer" id="footer">
@@ -1079,55 +1081,17 @@
   else window.addEventListener('load', observe, { once: true });
 })();
 </script>
-<dialog class="demo-dialog" id="demo-dialog" aria-labelledby="demo-form-title">
- <button class="demo-dialog__close" type="button" aria-label="Закрыть форму">×</button>
- <span class="demo-dialog__spark" aria-hidden="true">✧</span>
- <span class="demo-dialog__eyebrow">Познакомимся?</span>
- <h2 id="demo-form-title">Ваш следующий шаг<br><span>к удобному найму</span></h2>
- <p class="demo-dialog__intro">Оставьте контакты — обсудим вашу задачу и покажем WorkHere.</p>
- <form id="demo-form">
-  <div class="demo-form__fields">
-   <label>Имя<input name="firstName" autocomplete="given-name" required maxlength="80" placeholder="Иван"></label>
-   <label>Фамилия<input name="lastName" autocomplete="family-name" required maxlength="80" placeholder="Иванов"></label>
-   <label>Телефон<input name="phone" type="tel" autocomplete="tel" required maxlength="30" placeholder="+7 999 123-45-67"></label>
-   <label>Почта<input name="email" type="email" autocomplete="email" required maxlength="180" placeholder="name@company.ru"></label>
-   <label class="demo-form__wide">Компания<input name="company" autocomplete="organization" required maxlength="160" placeholder="Название компании"></label>
-  </div>
-  <label class="demo-form__consent"><input type="checkbox" name="consent" required><span>Я согласен на обработку персональных данных в соответствии с <a href="https://workhere.ru/privacy-policy" target="_blank" rel="noopener noreferrer">политикой конфиденциальности</a>.</span></label>
-  <button class="button button--primary demo-form__submit" type="submit">Оставить заявку</button>
-  <p class="demo-form__status" role="status" aria-live="polite"></p>
- </form>
-</dialog>
 <script>
 (() => {
- const dialog = document.querySelector('#demo-dialog');
- const form = document.querySelector('#demo-form');
- let opener;
- document.querySelectorAll('a[href="#demo-request"], a[href^="mailto:demo@workhere.ru"]').forEach(button => {
-  button.addEventListener('click', event => {
-   event.preventDefault();
-   opener = button;
-   if (!dialog.open) dialog.showModal();
-   document.documentElement.classList.add('demo-form-open');
-  });
- });
- dialog.querySelector('.demo-dialog__close').addEventListener('click', () => dialog.close());
- dialog.addEventListener('click', event => {
-  const box = dialog.getBoundingClientRect();
-  if (event.target === dialog && (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom)) dialog.close();
- });
- dialog.addEventListener('close', () => {
-  document.documentElement.classList.remove('demo-form-open');
-  if (opener) opener.focus();
- });
+ const form = document.querySelector('#demo-inline-form');
  const phone = form.elements.phone;
  phone.addEventListener('input', () => phone.setCustomValidity(''));
  form.addEventListener('submit', event => {
   event.preventDefault();
-  const digits = phone.value.replace(/\D/g, '');
-  phone.setCustomValidity(digits.length >= 10 && digits.length <= 15 ? '' : 'Введите телефон: от 10 до 15 цифр.');
+  const count = phone.value.replace(/\D/g, '').length;
+  phone.setCustomValidity(count >= 10 && count <= 15 ? '' : 'Введите телефон: от 10 до 15 цифр.');
   if (!form.reportValidity()) return;
-  form.querySelector('.demo-form__status').textContent = 'Форма заполнена. Отправка пока не подключена — данные никуда не отправлены.';
+  form.querySelector('.demo-inline__status').textContent = 'Отправка пока не подключена. Данные никуда не отправлены.';
  });
 })();
 </script>
