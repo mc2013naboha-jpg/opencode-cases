@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кейсы клиентов WorkHere</title>
   <meta name="description" content="Реальные истории компаний, которые ускорили найм и снизили затраты с помощью ATS WorkHere.">
-  <link rel="stylesheet" href="styles.css?v=main-style-89">
+  <link rel="stylesheet" href="styles.css?v=main-style-90">
   <style>#haval-case .haval-hero-poster__route{display:none!important} #haval-case .haval-hero-poster__route-new{display:block!important}</style>
 </head>
 <body>
@@ -1092,6 +1092,24 @@
   phone.setCustomValidity(count >= 10 && count <= 15 ? '' : 'Введите телефон: от 10 до 15 цифр.');
   if (!form.reportValidity()) return;
   form.querySelector('.demo-inline__status').textContent = 'Отправка пока не подключена. Данные никуда не отправлены.';
+ });
+})();
+</script>
+<script>
+(() => {
+ const nav = document.querySelector('.cases-company-selector');
+ if (!nav) return;
+ const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+ const button = document.createElement('button');
+ button.type = 'button';
+ button.className = 'company-motion-toggle';
+ button.textContent = 'Включить движение';
+ button.hidden = !reduced.matches;
+ nav.insertAdjacentElement('afterend', button);
+ button.addEventListener('click', () => {
+  const enabled = nav.classList.toggle('motion-enabled');
+  button.textContent = enabled ? 'Остановить движение' : 'Включить движение';
+  button.setAttribute('aria-pressed', String(enabled));
  });
 })();
 </script>

@@ -10212,6 +10212,25 @@ html.demo-form-open { overflow: hidden; }
   .cases-intro__nav.cases-company-selector .cases-intro__case,
   .cases-intro__nav.cases-company-selector.is-motion-visible .cases-intro__case { animation: none; }
 }
+/* Continuous card motion, with an explicit opt-in for reduced-motion users. */
+@keyframes company-card-float {
+  0%, 100% { top: 0; }
+  50% { top: -12px; }
+}
+.cases-intro__nav.cases-company-selector .cases-intro__case,
+.cases-intro__nav.cases-company-selector.is-motion-visible .cases-intro__case {
+ animation: company-card-float 3.6s ease-in-out var(--welcome-delay, 0s) infinite;
+}
+.cases-intro__nav.cases-company-selector .cases-intro__case:nth-of-type(2) { --welcome-delay: -.9s; }
+.cases-intro__nav.cases-company-selector .cases-intro__case:nth-of-type(3) { --welcome-delay: -1.8s; }
+.cases-intro__nav.cases-company-selector .cases-intro__case:nth-of-type(4) { --welcome-delay: -2.7s; }
+.company-motion-toggle { margin: 0 0 16px; padding: 8px 14px; border: 1px solid #326dff; border-radius: 20px; color: #2355ce; background: white; font: inherit; font-size: 13px; cursor: pointer; }
+.company-motion-toggle[hidden] { display: none; }
+@media (prefers-reduced-motion: reduce) {
+ .cases-intro__nav.cases-company-selector:not(.motion-enabled) .cases-intro__case { animation: none; }
+ .cases-intro__nav.cases-company-selector.motion-enabled .cases-intro__case { animation: company-card-float 3.6s ease-in-out var(--welcome-delay, 0s) infinite; }
+}
+
 /* Radisson: the same heading / visual / benefit-card composition as CDEK. */
 #radisson-case .radisson-change-layout { max-width: 1440px; margin: 0 auto; font-family: var(--font-display); }
 #radisson-case .radisson-change-heading { margin: 0 auto 44px; max-width: 100%; text-align: center; font-size: clamp(36px, 5vw, 72px); line-height: 1.04; letter-spacing: -.05em; color: #101116; }
