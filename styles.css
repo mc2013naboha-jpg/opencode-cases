@@ -10097,10 +10097,22 @@ body {
 /* Vector logos have their own canvas, clear of legacy cropped logo rules. */
 .cases-intro__nav.cases-company-selector .company-logo-drawing { display: block; position: static; width: 100%; height: auto; max-width: 180px; max-height: none; aspect-ratio: 18 / 11; overflow: visible; fill: none; stroke: none; flex-shrink: 0; }
 
+.cases-intro__nav.cases-company-selector .company-card-rays { display: none; position: absolute; width: 40px; height: 34px; top: -36px; right: -12px; overflow: visible; pointer-events: none; }
+.cases-intro__nav.cases-company-selector .cases-intro__case:first-of-type .company-card-rays { display: block; left: -17px; right: auto; transform: scaleX(-1); }
+.cases-intro__nav.cases-company-selector .cases-intro__case:last-of-type .company-card-rays,
+.cases-intro__nav.cases-company-selector .cases-intro__case.is-active .company-card-rays { display: block; }
+.cases-intro__nav.cases-company-selector .company-card-arrow { display: none; position: absolute; width: 80px; height: 53px; bottom: -58px; left: 12%; overflow: visible; pointer-events: none; }
+.cases-intro__nav.cases-company-selector .cases-intro__case.is-active .company-card-arrow { display: block; }
+.cases-intro__nav.cases-company-selector { margin-bottom: 28px; }
+@media (max-width: 600px) {
+  .cases-intro__nav.cases-company-selector .company-card-arrow { width: 56px; height: 37px; bottom: -40px; }
+}
+
 /* Company selector: pastel logo cards connected by a drawn route. */
 .cases-intro__nav.cases-company-selector { position: relative; isolation: isolate; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(12px, 1.7vw, 24px); max-width: 850px; padding: 42px 8px 30px; overflow: visible; }
 .cases-company-selector__route { position: absolute; z-index: -1; left: 0; top: 35px; width: 100%; height: 130px; pointer-events: none; }
-.cases-intro__nav.cases-company-selector .cases-intro__case { --card-tilt: -7deg; --card-color: #d9eaff; position: relative; display: grid; place-items: center; min-height: 108px; padding: 12px 8px; border: 2px solid transparent; border-radius: 20px; background: var(--card-color); box-shadow: none; animation: none; transform: rotate(var(--card-tilt)); }
+.cases-intro__nav.cases-company-selector .cases-intro__case { --card-tilt: -7deg; --card-color: #d9eaff; position: relative; display: grid; place-items: center; justify-self: center; width: 80%; min-height: 0; padding: 9px 7px; border: 2px solid transparent; border-radius: 18px; background: var(--card-color); box-shadow: none; animation: none; transform: rotate(var(--card-tilt)); }
+.cases-company-selector__route path { stroke-width: 2.6; }
 .cases-intro__nav.cases-company-selector .cases-intro__case[href="#cdek-case"] { --card-color: #dffbed; --card-tilt: 8deg; }
 .cases-intro__nav.cases-company-selector .cases-intro__case[href="#pivaldi-case"] { --card-color: #fff4cf; --card-tilt: -6deg; }
 .cases-intro__nav.cases-company-selector .cases-intro__case[href="#miuz-case"] { --card-color: #eee7ff; --card-tilt: 7deg; }
@@ -10111,7 +10123,24 @@ body {
 .cases-intro__nav.cases-company-selector .cases-intro__case.is-active { border-color: #326dff; background: var(--card-color); box-shadow: 0 8px 22px #326dff18; transform: rotate(var(--card-tilt)) translateY(-6px); }
 .cases-intro__nav.cases-company-selector .cases-intro__case::after { display: none; }
 .cases-intro__nav.cases-company-selector .cases-intro__case.is-active::before { content: "ВЫБРАННЫЙ КЕЙС"; position: absolute; top: -27px; left: 50%; transform: translateX(-50%); white-space: nowrap; padding: 5px 9px; border-radius: 12px; background: #326dff; color: white; font: 700 10px/1.2 var(--font-display); }
-.cases-intro__nav.cases-company-selector .cases-intro__case:hover { background: var(--card-color); border-color: #326dff; transform: rotate(0deg) translateY(-5px); box-shadow: 0 8px 22px #326dff18; }
+.cases-intro__nav.cases-company-selector .cases-intro__case:hover { background: var(--card-color); border-color: #326dff; transform: rotate(0deg) translateY(-5px) scale(1.06); box-shadow: 0 8px 22px #326dff18; z-index: 2; }
+.cases-intro__nav.cases-company-selector .cases-intro__case {
+  animation: company-card-welcome 2.6s ease-in-out var(--welcome-delay, 0s) 1;
+  transition: transform 380ms cubic-bezier(.2,.7,.25,1), border-color 250ms ease, box-shadow 380ms ease;
+  transform-origin: center;
+}
+.cases-intro__nav.cases-company-selector .cases-intro__case:nth-of-type(2) { --welcome-delay: .12s; }
+.cases-intro__nav.cases-company-selector .cases-intro__case:nth-of-type(3) { --welcome-delay: .24s; }
+.cases-intro__nav.cases-company-selector .cases-intro__case:nth-of-type(4) { --welcome-delay: .36s; }
+.cases-intro__nav.cases-company-selector .cases-intro__case:nth-of-type(5) { --welcome-delay: .48s; }
+@keyframes company-card-welcome {
+  0%, 100% { translate: 0 0; rotate: 0deg; }
+  30% { translate: 0 -7px; rotate: 2deg; }
+  65% { translate: 0 3px; rotate: -1.5deg; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cases-intro__nav.cases-company-selector .cases-intro__case { animation: none; transition: none; }
+}
 @media (max-width: 600px) {
   .cases-intro__nav.cases-company-selector { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 16px; padding-top: 36px; }
   .cases-intro__nav.cases-company-selector .cases-intro__case:last-child { grid-column: auto; }
