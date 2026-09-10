@@ -10094,6 +10094,31 @@ body {
 
 #radisson-case .radisson-hero-poster__facts .radisson-hero-poster__fact strong { color: #178e4c; }
 
+/* Vector logos have their own canvas, clear of legacy cropped logo rules. */
+.cases-intro__nav.cases-company-selector .company-logo-drawing { display: block; position: static; width: 100%; height: auto; max-width: 180px; max-height: none; aspect-ratio: 18 / 11; overflow: visible; fill: none; stroke: none; flex-shrink: 0; }
+
+/* Company selector: pastel logo cards connected by a drawn route. */
+.cases-intro__nav.cases-company-selector { position: relative; isolation: isolate; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(12px, 1.7vw, 24px); max-width: 850px; padding: 42px 8px 30px; overflow: visible; }
+.cases-company-selector__route { position: absolute; z-index: -1; left: 0; top: 35px; width: 100%; height: 130px; pointer-events: none; }
+.cases-intro__nav.cases-company-selector .cases-intro__case { --card-tilt: -7deg; --card-color: #d9eaff; position: relative; display: grid; place-items: center; min-height: 108px; padding: 12px 8px; border: 2px solid transparent; border-radius: 20px; background: var(--card-color); box-shadow: none; animation: none; transform: rotate(var(--card-tilt)); }
+.cases-intro__nav.cases-company-selector .cases-intro__case[href="#cdek-case"] { --card-color: #dffbed; --card-tilt: 8deg; }
+.cases-intro__nav.cases-company-selector .cases-intro__case[href="#pivaldi-case"] { --card-color: #fff4cf; --card-tilt: -6deg; }
+.cases-intro__nav.cases-company-selector .cases-intro__case[href="#miuz-case"] { --card-color: #eee7ff; --card-tilt: 7deg; }
+.cases-intro__nav.cases-company-selector .cases-intro__case[href="#radisson-case"] { --card-tilt: -4deg; --card-color: linear-gradient(135deg, #080820, #122b62); }
+.cases-intro__nav.cases-company-selector--four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.cases-intro__nav.cases-company-selector .cases-intro__case > strong { display: none; }
+.cases-intro__nav.cases-company-selector .cases-intro__case-logo { background: transparent; border: 0; box-shadow: none; }
+.cases-intro__nav.cases-company-selector .cases-intro__case.is-active { border-color: #326dff; background: var(--card-color); box-shadow: 0 8px 22px #326dff18; transform: rotate(var(--card-tilt)) translateY(-6px); }
+.cases-intro__nav.cases-company-selector .cases-intro__case::after { display: none; }
+.cases-intro__nav.cases-company-selector .cases-intro__case.is-active::before { content: "ВЫБРАННЫЙ КЕЙС"; position: absolute; top: -27px; left: 50%; transform: translateX(-50%); white-space: nowrap; padding: 5px 9px; border-radius: 12px; background: #326dff; color: white; font: 700 10px/1.2 var(--font-display); }
+.cases-intro__nav.cases-company-selector .cases-intro__case:hover { background: var(--card-color); border-color: #326dff; transform: rotate(0deg) translateY(-5px); box-shadow: 0 8px 22px #326dff18; }
+@media (max-width: 600px) {
+  .cases-intro__nav.cases-company-selector { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 16px; padding-top: 36px; }
+  .cases-intro__nav.cases-company-selector .cases-intro__case:last-child { grid-column: auto; }
+  .cases-company-selector__route { display: none; }
+  .cases-intro__nav.cases-company-selector--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 /* Radisson: the same heading / visual / benefit-card composition as CDEK. */
 #radisson-case .radisson-change-layout { max-width: 1440px; margin: 0 auto; font-family: var(--font-display); }
 #radisson-case .radisson-change-heading { margin: 0 auto 44px; max-width: 100%; text-align: center; font-size: clamp(36px, 5vw, 72px); line-height: 1.04; letter-spacing: -.05em; color: #101116; }
