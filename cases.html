@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кейсы клиентов WorkHere</title>
   <meta name="description" content="Реальные истории компаний, которые ускорили найм и снизили затраты с помощью ATS WorkHere.">
-  <link rel="stylesheet" href="styles.css?v=main-style-85">
+  <link rel="stylesheet" href="styles.css?v=main-style-86">
   <style>#haval-case .haval-hero-poster__route{display:none!important} #haval-case .haval-hero-poster__route-new{display:block!important}</style>
 </head>
 <body>
@@ -1057,6 +1057,27 @@
     showCase(window.location.hash, false);
   }
 
+</script>
+<script>
+(() => {
+  const selector = document.querySelector('.cases-company-selector');
+  if (!selector || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const start = () => {
+    requestAnimationFrame(() => requestAnimationFrame(() => selector.classList.add('is-motion-visible')));
+  };
+  const observe = () => {
+    if (!('IntersectionObserver' in window)) { start(); return; }
+    const observer = new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) {
+        start();
+        observer.disconnect();
+      }
+    }, { threshold: 0.4 });
+    observer.observe(selector);
+  };
+  if (document.readyState === 'complete') observe();
+  else window.addEventListener('load', observe, { once: true });
+})();
 </script>
 </body>
 </html>

@@ -10148,6 +10148,12 @@ body {
   .cases-intro__nav.cases-company-selector--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
+/* Start the one-time welcome motion when the selector enters the viewport. */
+.cases-intro__nav.cases-company-selector .cases-intro__case { animation: none; }
+.cases-intro__nav.cases-company-selector.is-motion-visible .cases-intro__case { animation: company-card-welcome 2.6s ease-in-out var(--welcome-delay, 0s) 1; }
+@media (prefers-reduced-motion: reduce) {
+  .cases-intro__nav.cases-company-selector.is-motion-visible .cases-intro__case { animation: none; }
+}
 /* Radisson: the same heading / visual / benefit-card composition as CDEK. */
 #radisson-case .radisson-change-layout { max-width: 1440px; margin: 0 auto; font-family: var(--font-display); }
 #radisson-case .radisson-change-heading { margin: 0 auto 44px; max-width: 100%; text-align: center; font-size: clamp(36px, 5vw, 72px); line-height: 1.04; letter-spacing: -.05em; color: #101116; }
