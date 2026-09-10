@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кейсы клиентов WorkHere</title>
   <meta name="description" content="Реальные истории компаний, которые ускорили найм и снизили затраты с помощью ATS WorkHere.">
-  <link rel="stylesheet" href="styles.css?v=main-style-86">
+  <link rel="stylesheet" href="styles.css?v=main-style-87">
   <style>#haval-case .haval-hero-poster__route{display:none!important} #haval-case .haval-hero-poster__route-new{display:block!important}</style>
 </head>
 <body>
@@ -1077,6 +1077,58 @@
   };
   if (document.readyState === 'complete') observe();
   else window.addEventListener('load', observe, { once: true });
+})();
+</script>
+<dialog class="demo-dialog" id="demo-dialog" aria-labelledby="demo-form-title">
+ <button class="demo-dialog__close" type="button" aria-label="Закрыть форму">×</button>
+ <span class="demo-dialog__spark" aria-hidden="true">✧</span>
+ <span class="demo-dialog__eyebrow">Познакомимся?</span>
+ <h2 id="demo-form-title">Ваш следующий шаг<br><span>к удобному найму</span></h2>
+ <p class="demo-dialog__intro">Оставьте контакты — обсудим вашу задачу и покажем WorkHere.</p>
+ <form id="demo-form">
+  <div class="demo-form__fields">
+   <label>Имя<input name="firstName" autocomplete="given-name" required maxlength="80" placeholder="Иван"></label>
+   <label>Фамилия<input name="lastName" autocomplete="family-name" required maxlength="80" placeholder="Иванов"></label>
+   <label>Телефон<input name="phone" type="tel" autocomplete="tel" required maxlength="30" placeholder="+7 999 123-45-67"></label>
+   <label>Почта<input name="email" type="email" autocomplete="email" required maxlength="180" placeholder="name@company.ru"></label>
+   <label class="demo-form__wide">Компания<input name="company" autocomplete="organization" required maxlength="160" placeholder="Название компании"></label>
+  </div>
+  <label class="demo-form__consent"><input type="checkbox" name="consent" required><span>Я согласен на обработку персональных данных в соответствии с <a href="https://workhere.ru/privacy-policy" target="_blank" rel="noopener noreferrer">политикой конфиденциальности</a>.</span></label>
+  <button class="button button--primary demo-form__submit" type="submit">Оставить заявку</button>
+  <p class="demo-form__status" role="status" aria-live="polite"></p>
+ </form>
+</dialog>
+<script>
+(() => {
+ const dialog = document.querySelector('#demo-dialog');
+ const form = document.querySelector('#demo-form');
+ let opener;
+ document.querySelectorAll('a[href="#demo-request"], a[href^="mailto:demo@workhere.ru"]').forEach(button => {
+  button.addEventListener('click', event => {
+   event.preventDefault();
+   opener = button;
+   if (!dialog.open) dialog.showModal();
+   document.documentElement.classList.add('demo-form-open');
+  });
+ });
+ dialog.querySelector('.demo-dialog__close').addEventListener('click', () => dialog.close());
+ dialog.addEventListener('click', event => {
+  const box = dialog.getBoundingClientRect();
+  if (event.target === dialog && (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom)) dialog.close();
+ });
+ dialog.addEventListener('close', () => {
+  document.documentElement.classList.remove('demo-form-open');
+  if (opener) opener.focus();
+ });
+ const phone = form.elements.phone;
+ phone.addEventListener('input', () => phone.setCustomValidity(''));
+ form.addEventListener('submit', event => {
+  event.preventDefault();
+  const digits = phone.value.replace(/\D/g, '');
+  phone.setCustomValidity(digits.length >= 10 && digits.length <= 15 ? '' : 'Введите телефон: от 10 до 15 цифр.');
+  if (!form.reportValidity()) return;
+  form.querySelector('.demo-form__status').textContent = 'Форма заполнена. Отправка пока не подключена — данные никуда не отправлены.';
+ });
 })();
 </script>
 </body>
