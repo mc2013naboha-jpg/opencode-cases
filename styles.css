@@ -8564,12 +8564,59 @@ body {
 }
 
 #haval-case .haval-hero-poster__route {
-  display: block;
+  display: none;
   width: 100%;
   max-width: 880px;
   height: auto;
   margin-top: clamp(30px, 3.2vw, 46px);
 }
+
+#haval-case .haval-hero-poster__route-new {
+  display: block;
+  width: 100%;
+  max-width: 880px;
+  height: auto;
+  margin-top: clamp(30px, 3.2vw, 46px);
+  overflow: visible;
+  fill: none;
+  stroke: #101116;
+  stroke-width: 2.35;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#pivaldi-case .pivaldi-hero-poster__route { display: none; }
+#pivaldi-case .pivaldi-hero-poster__route-new {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin-top: clamp(30px, 3.2vw, 46px);
+  overflow: visible;
+  fill: none;
+  stroke: #101116;
+  stroke-width: 2.35;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+#pivaldi-case .pivaldi-hero-poster__route-new text { stroke: none; }
+#pivaldi-case .pivaldi-context { margin-top: 28px; color: #30333a; }
+#pivaldi-case .pivaldi-context__intro { max-width: 62ch; margin: 0; font-size: clamp(17px, 1.35vw, 20px); line-height: 1.5; }
+#pivaldi-case .pivaldi-context__facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 24px 0; }
+#pivaldi-case .pivaldi-context__facts p { margin: 0; padding-left: 16px; border-left: 3px solid #78e5a5; }
+#pivaldi-case .pivaldi-context__facts strong { display: block; color: #178e4c; font-size: 20px; line-height: 1.25; }
+#pivaldi-case .pivaldi-context__facts span { display: block; margin-top: 6px; font-size: 16px; line-height: 1.4; }
+#pivaldi-case .pivaldi-context__label { margin: 0 0 10px; font-size: 14px; font-weight: 700; }
+#pivaldi-case .pivaldi-context__roles { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
+#pivaldi-case .pivaldi-context__roles li { padding: 7px 13px; border-radius: 18px; background: #e9e7ff; font-size: 14px; line-height: 1.35; }
+#pivaldi-case .pivaldi-context__roles li:nth-child(2n) { background: #fff3c4; }
+@media (max-width: 480px) {
+  #pivaldi-case .pivaldi-context__facts { grid-template-columns: 1fr; gap: 16px; }
+}
+#pivaldi-case .pivaldi-hero-poster__fact strong { color: #178e4c; }
+#pivaldi-case .pivaldi-hero-poster__fact-art { width: 118px; height: 110px; overflow: visible; }
+#pivaldi-case .pivaldi-hero-poster__fact-art { filter: drop-shadow(0 8px 0 rgba(16,17,22,.08)); transform: scale(1.08); transform-origin: center; }
+#haval-case .haval-hero-poster__route-new text { stroke: none; }
 
 #haval-case .haval-art__paper { fill: #fffcf7; }
 #haval-case .haval-art__blue { fill: #98a7ff; }
@@ -8617,7 +8664,7 @@ body {
 #haval-case .haval-hero-poster__fact strong {
   display: block;
   margin: 0;
-  color: #101116;
+  color: #178e4c;
   font-family: var(--font-display);
   font-size: clamp(34px, 2.75vw, 48px);
   font-weight: 800;
@@ -8640,7 +8687,9 @@ body {
 
 #haval-case .haval-hero-poster__fact-art {
   width: 100%;
-  max-width: 108px;
+  max-width: 122px;
+  height: 122px;
+  overflow: visible;
   justify-self: end;
 }
 
@@ -8730,13 +8779,13 @@ body {
 #haval-case .haval-journey__list--solution li:nth-child(8) { background: #eaf1ff; }
 
 #haval-case .haval-journey__list--solution li::before {
-  width: 12px;
-  height: 7px;
-  border-bottom: 2px solid #24a65a;
-  border-left: 2px solid #24a65a;
+  content: "";
+  width: 26px;
+  height: 26px;
+  border: 0;
   border-radius: 0;
-  background: transparent;
-  transform: rotate(-45deg);
+  background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2040%2040%22%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%2220%22%20r%3D%2217%22%20fill%3D%22%2379e0aa%22%20stroke%3D%22%23101116%22%20stroke-width%3D%222.5%22%2F%3E%3Cpath%20d%3D%22m10%2020%207%207%2014-17%22%20fill%3D%22none%22%20stroke%3D%22%23101116%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E") center / contain no-repeat;
+  transform: none;
 }
 
 #haval-case .haval-journey__route {
@@ -8866,15 +8915,15 @@ body {
 #haval-case .haval-metric--speed .haval-metric__art { max-width: 250px; justify-self: end; }
 #haval-case .haval-metric--load { grid-column: 8 / -1; grid-row: 1; background: #ddf8e8; }
 #haval-case .haval-metric--load .metric-card__value { color: #178e4c; }
-#haval-case .haval-metric--load .haval-metric__art { position: absolute; right: 24px; bottom: 22px; width: 43%; }
+#haval-case .haval-metric--load .haval-metric__art { position: static; align-self: flex-end; flex-shrink: 0; width: min(55%, 160px); height: 110px; margin-top: auto; }
 #haval-case .haval-metric--approval { grid-column: 1 / 5; grid-row: 2; background: #fff3c4; }
-#haval-case .haval-metric--approval .haval-metric__art { position: absolute; right: 16px; bottom: 18px; width: 38%; }
+#haval-case .haval-metric--approval .haval-metric__art { position: static; align-self: flex-end; flex-shrink: 0; width: min(55%, 160px); height: 110px; margin-top: auto; }
 #haval-case .haval-metric--feedback { grid-column: 5 / 10; grid-row: 2; background: #eae7ff; }
 #haval-case .haval-metric--feedback .metric-card__value { color: #665ae6; }
-#haval-case .haval-metric--feedback .haval-metric__art { position: absolute; right: 20px; bottom: 20px; width: 38%; }
+#haval-case .haval-metric--feedback .haval-metric__art { position: static; align-self: flex-end; flex-shrink: 0; width: min(55%, 160px); height: 110px; margin-top: auto; }
 #haval-case .haval-metric--cost { grid-column: 10 / -1; grid-row: 2; background: #ffe5df; }
 #haval-case .haval-metric--cost .metric-card__value { color: #e45336; }
-#haval-case .haval-metric--cost .haval-metric__art { position: absolute; right: 16px; bottom: 16px; width: 46%; }
+#haval-case .haval-metric--cost .haval-metric__art { position: static; align-self: flex-end; flex-shrink: 0; width: min(55%, 160px); height: 110px; margin-top: auto; }
 
 #haval-case .haval-results-poster__decor {
   position: absolute;
@@ -9211,7 +9260,7 @@ body {
 #pivaldi-case .pivaldi-hero-poster__fact strong {
   display: block;
   margin: 0;
-  color: #101116;
+  color: #178e4c;
   font-family: var(--font-display);
   font-size: clamp(40px, 3vw, 50px);
   font-weight: 800;
@@ -9251,7 +9300,7 @@ body {
 #pivaldi-case .pivaldi-flow__box { max-width: 1360px; margin: 0 auto; padding: 0; }
 
 #pivaldi-case .pivaldi-flow__title {
-  max-width: 980px;
+  max-width: 100%;
   margin: 0 0 clamp(42px, 4vw, 62px);
   color: #101116;
   font-family: var(--font-display);
@@ -9259,6 +9308,14 @@ body {
   font-weight: 800;
   line-height: 0.98;
   letter-spacing: -0.05em;
+}
+
+#pivaldi-case .pivaldi-flow__title-line { display: block; }
+#pivaldi-case .pivaldi-flow__title mark { position: relative; isolation: isolate; display: inline-block; color: inherit; background: transparent; }
+#pivaldi-case .pivaldi-flow__title mark::before { position: absolute; z-index: -1; inset: 24% -2% 0; content: ""; background: #ffd95a; clip-path: polygon(2% 10%, 92% 0, 100% 28%, 96% 92%, 7% 100%, 0 74%); transform: rotate(-1deg); }
+@media (max-width: 767px) {
+  #pivaldi-case .pivaldi-flow__title mark { display: inline; box-decoration-break: clone; -webkit-box-decoration-break: clone; background: linear-gradient(transparent 28%, #ffd95a 28%, #ffd95a 94%, transparent 94%); }
+  #pivaldi-case .pivaldi-flow__title mark::before { display: none; }
 }
 
 #pivaldi-case .pivaldi-flow__grid {
@@ -9312,11 +9369,11 @@ body {
   background: #fffcf7;
 }
 
-#pivaldi-case .pivaldi-steps-poster__box { max-width: 1360px; margin: 0 auto; padding: 0; }
-#pivaldi-case .pivaldi-steps-poster__title { max-width: 860px; margin: 0; color: #101116; font-family: var(--font-display); font-size: clamp(44px, 4.1vw, 66px); font-weight: 900; line-height: 0.95; letter-spacing: -0.055em; }
-#pivaldi-case .pivaldi-steps-poster__box > .case-story__lead { max-width: 840px; margin: 28px auto 0; color: #30333a; font-family: var(--font-display); font-size: clamp(17px, 1.3vw, 20px); font-weight: 500; line-height: 1.5; text-align: center; }
+#pivaldi-case .pivaldi-steps-poster__box { max-width: 1360px; margin: 0 auto; padding: 0; display: flex; flex-direction: column; gap: clamp(32px, 3vw, 44px); }
+#pivaldi-case .pivaldi-steps-poster__title { max-width: 860px; width: 100%; margin: 0 auto; text-align: center; align-self: center; color: #101116; font-family: var(--font-display); font-size: clamp(44px, 4.1vw, 66px); font-weight: 900; line-height: 0.95; letter-spacing: -0.055em; }
+#pivaldi-case .pivaldi-steps-poster__box > .case-story__lead { max-width: 840px; margin: 0 auto; color: #30333a; font-family: var(--font-display); font-size: clamp(17px, 1.3vw, 20px); font-weight: 500; line-height: 1.5; text-align: center; }
 
-#pivaldi-case .pivaldi-steps-poster__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin: clamp(44px, 5vw, 70px) 0 32px; }
+#pivaldi-case .pivaldi-steps-poster__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin: 0; }
 #pivaldi-case .pivaldi-steps-poster__step,
 #pivaldi-case .pivaldi-steps-poster__step:nth-child(n) { min-height: 0; padding: 30px; border: 0; border-radius: 24px; background: #ddf8e8; box-shadow: none; }
 #pivaldi-case .pivaldi-steps-poster__step--automation { background: #fff3c4; }
@@ -9326,7 +9383,7 @@ body {
 #pivaldi-case .pivaldi-steps-poster__art { width: 140px; max-width: 100%; height: auto; margin-bottom: 24px; }
 #pivaldi-case .pivaldi-steps-poster__step h4 { margin: 0 0 16px; color: #101116; font-family: var(--font-display); font-size: clamp(21px, 1.7vw, 27px); font-weight: 800; line-height: 1.05; letter-spacing: -0.035em; }
 #pivaldi-case .pivaldi-steps-poster__step p { margin: 0; color: #101116; font-family: var(--font-display); font-size: 16px; font-weight: 500; line-height: 1.45; }
-#pivaldi-case .pivaldi-steps-poster__box > .case-story__note { max-width: 1080px; margin: 18px auto 0; padding: 24px 28px; border-radius: 20px; color: #101116; background: #ffe5df; font-family: var(--font-display); font-size: 17px; font-weight: 600; line-height: 1.48; text-align: center; }
+#pivaldi-case .pivaldi-steps-poster__box > .case-story__note { max-width: 1080px; margin: 0 auto; padding: 24px 28px; border-radius: 20px; color: #101116; background: #ffe5df; font-family: var(--font-display); font-size: clamp(17px, 1.3vw, 20px); font-weight: 500; line-height: 1.5; text-align: center; }
 
 #pivaldi-case .pivaldi-partnership { padding: clamp(72px, 7vw, 110px) clamp(24px, 4vw, 64px); border: 0; background: #fffcf7; }
 #pivaldi-case .pivaldi-partnership__box { max-width: 1360px; display: grid; grid-template-columns: minmax(250px, 0.7fr) minmax(190px, 0.42fr) minmax(0, 1fr); gap: clamp(30px, 5vw, 72px); align-items: center; margin: 0 auto; padding: clamp(32px, 4vw, 58px); border-radius: 30px; background: #eae7ff; }
@@ -9855,4 +9912,237 @@ body {
     width: 100px;
     height: 68px;
   }
+}
+
+/* Compact Haval metrics: separate grid cells for values, artwork and copy. */
+#haval-case .haval-results-poster__grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: auto auto;
+  gap: 24px;
+}
+#haval-case .haval-results-poster .haval-metric:nth-child(n) {
+  display: grid !important;
+  grid-column: span 2;
+  grid-row: auto;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  grid-template-rows: auto auto;
+  align-items: center;
+  align-content: start;
+  gap: 18px 12px;
+  min-height: 0;
+  height: auto;
+  padding: clamp(24px, 2.4vw, 34px);
+}
+#haval-case .haval-results-poster .haval-metric:nth-child(-n+2) {
+  grid-column: span 3;
+}
+#haval-case .haval-results-poster .haval-metric .metric-card__value {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
+  margin: 0;
+  font-size: clamp(42px, 4.4vw, 66px);
+}
+#haval-case .haval-results-poster .haval-metric--speed .metric-card__value {
+  font-size: clamp(72px, 7vw, 104px);
+}
+#haval-case .haval-results-poster .haval-metric .haval-metric__art {
+  position: static;
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  align-self: center;
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+}
+#haval-case .haval-results-poster .haval-metric:nth-child(-n+2) .haval-metric__art {
+  max-width: 210px;
+}
+#haval-case .haval-results-poster .metric-card__text {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  min-width: 0;
+  max-width: 100%;
+  margin: 0;
+  font-size: clamp(16px, 1.25vw, 19px);
+  line-height: 1.4;
+}
+#haval-case .haval-results-poster .haval-metric::after { content: none; }
+@media (max-width: 1100px) {
+  #haval-case .haval-results-poster__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #haval-case .haval-results-poster .haval-metric:nth-child(n) { grid-column: auto; }
+  #haval-case .haval-results-poster .haval-metric--speed:nth-child(n) { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+  #haval-case .haval-results-poster__grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  #haval-case .haval-results-poster .haval-metric:nth-child(n) { grid-column: 1; padding: 24px; }
+  #haval-case .haval-results-poster .haval-metric .metric-card__value { font-size: clamp(42px, 12vw, 62px); }
+  #haval-case .haval-results-poster .haval-metric .haval-metric__art { max-width: 150px; }
+}
+
+/* Haval: connected communication and a shared hiring decision. */
+#haval-case .haval-impact-poster__inner {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 58px);
+  align-items: center;
+  padding: clamp(28px, 3vw, 44px);
+}
+#haval-case .haval-impact-poster__content { min-width: 0; }
+#haval-case .haval-impact-poster .case-change__title { max-width: none; font-size: clamp(44px, 4.1vw, 64px); }
+#haval-case .haval-impact-poster__story { display: flex; flex-direction: column; gap: 20px; align-items: stretch; min-width: 0; }
+#haval-case .haval-impact-poster .case-change__text { font-size: clamp(16px, 1.25vw, 19px); line-height: 1.5; }
+#haval-case .haval-connect { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 30px; }
+#haval-case .haval-connect__item { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 14px 8px 12px; background: #fffcf7; border: 2px solid #17191f; border-radius: 20px; box-shadow: 3px 4px 0 #c7d5f3; }
+#haval-case .haval-connect__item strong { font-size: 14px; line-height: 1.2; color: #17191f; }
+#haval-case .haval-connect__logo { display: block; width: clamp(56px, 5.5vw, 80px); aspect-ratio: 1; overflow: hidden; border-radius: 50%; }
+#haval-case .haval-connect__logo img, #haval-case .haval-connect__logo svg { display: block; width: 100%; height: 100%; object-fit: contain; }
+#haval-case .haval-connect__logo--wa img { transform: scale(1.25); }
+#haval-case .haval-team-scene { margin: 20px 0 0; }
+#haval-case .haval-team-scene > svg { display: block; width: 100%; height: auto; fill: none; stroke: #17191f; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+#haval-case .haval-team-scene__brand { fill: #17191f; stroke: none; font: 700 17px sans-serif; }
+#haval-case .haval-team-scene__label { fill: #17191f; stroke: none; font: 12px sans-serif; }
+#haval-case .haval-team-scene figcaption { margin-top: 8px; text-align: center; font-size: 14px; line-height: 1.4; color: #303d55; }
+@media (max-width: 900px) {
+  #haval-case .haval-impact-poster__inner { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  #haval-case .haval-team-scene { max-width: 560px; margin: 20px auto 0; }
+}
+@media (max-width: 480px) {
+  #haval-case .haval-impact-poster__inner { padding: 26px 18px; }
+  #haval-case .haval-connect { gap: 9px; }
+  #haval-case .haval-connect__item { padding: 12px 4px; border-radius: 15px; }
+  #haval-case .haval-connect__item strong { font-size: 12px; }
+}
+
+/* Leave room for the illustrated solution markers on every screen. */
+#haval-case .haval-journey__list--solution li { padding-left: 60px; }
+
+/* Pivaldi results: self-contained cards following the CDEK copy/art structure. */
+#pivaldi-case .pivaldi-results-poster__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto; gap: 24px; }
+#pivaldi-case .pivaldi-results-poster .pivaldi-metric:nth-child(n) { display: grid !important; grid-column: auto; grid-row: auto; grid-template-columns: minmax(0, 1fr) minmax(100px, 0.42fr); align-items: center; gap: 22px; padding: 30px; min-height: 0 !important; height: auto; border: 0; border-radius: 24px; box-shadow: none; }
+#pivaldi-case .pivaldi-metric__copy { min-width: 0; }
+#pivaldi-case .pivaldi-results-poster .pivaldi-metric .metric-card__value { margin: 0 0 18px; font-size: clamp(44px, 4.5vw, 68px); }
+#pivaldi-case .pivaldi-results-poster .pivaldi-metric .metric-card__text { max-width: none; font-size: 17px; line-height: 1.4; margin: 0; }
+#pivaldi-case .pivaldi-results-poster .pivaldi-metric .pivaldi-metric__art { position: static; inset: auto; width: 100%; max-width: 180px; height: auto; margin: 0; justify-self: end; overflow: hidden; transform: none; }
+#pivaldi-case .pivaldi-results-poster .pivaldi-metric::after { content: none; }
+@media (max-width: 1000px) {
+  #pivaldi-case .pivaldi-results-poster .pivaldi-metric:nth-child(n) { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 24px; }
+  #pivaldi-case .pivaldi-results-poster .pivaldi-metric .pivaldi-metric__art { max-width: 130px; }
+}
+@media (max-width: 600px) {
+  #pivaldi-case .pivaldi-results-poster__grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+}
+
+/* Pivaldi closing card: title and integrations opposite the two paragraphs. */
+#pivaldi-case .pivaldi-impact-poster__inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(22px, 2.4vw, 32px); padding: clamp(28px, 4vw, 56px); align-items: center; }
+#pivaldi-case .pivaldi-impact-poster__content { min-width: 0; width: 100%; max-width: 490px; justify-self: end; text-align: left; }
+#pivaldi-case .pivaldi-impact-poster .case-change__title { max-width: none; font-size: clamp(27px, 2.9vw, 43px); line-height: 1.1; }
+#pivaldi-case .pivaldi-impact-poster .case-change__title .pivaldi-impact-title-line { display: block; white-space: nowrap; }
+#pivaldi-case .pivaldi-impact-poster .case-change__title em { display: inline-block; white-space: nowrap; }
+#pivaldi-case .pivaldi-impact-poster__heading-apps { width: max-content; max-width: 100%; }
+#pivaldi-case .pivaldi-impact-poster__content .case-change__apps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(12px, 1.5vw, 22px); width: 0; min-width: 100%; height: auto; min-height: 0; margin: 30px 0 0; }
+#pivaldi-case .pivaldi-impact-poster__content .case-change__apps .app-icon { position: static; inset: auto; display: block; width: 100%; height: auto; aspect-ratio: 1; max-width: 100%; object-fit: contain; margin: 0; transform: none; filter: none; box-shadow: none; }
+#pivaldi-case .pivaldi-impact-poster__text { display: flex; flex-direction: column; gap: 22px; align-items: stretch; align-self: center; justify-self: start; width: 100%; max-width: 550px; min-width: 0; margin: 0; }
+#pivaldi-case .pivaldi-impact-poster__text p { margin: 0; font-size: clamp(16px, 1.25vw, 19px); line-height: 1.5; }
+#pivaldi-case .pivaldi-impact-poster__decor { display: none; }
+@media (max-width: 900px) {
+  #pivaldi-case .pivaldi-impact-poster__inner { grid-template-columns: minmax(0, 1fr); }
+  #pivaldi-case .pivaldi-impact-poster__content, #pivaldi-case .pivaldi-impact-poster__text { justify-self: center; }
+}
+@media (max-width: 480px) {
+  #pivaldi-case .pivaldi-impact-poster__inner { padding: 24px; }
+  #pivaldi-case .pivaldi-impact-poster .case-change__title { font-size: clamp(21px, 5.6vw, 27px); }
+}
+
+/* Radisson tasks and solutions use equal column and card widths. */
+#radisson-case .radisson-journey__stage { grid-template-columns: minmax(0, 1fr) 100px minmax(0, 1fr); gap: 24px; }
+#radisson-case .radisson-journey__list { grid-auto-rows: auto; gap: 12px; }
+#radisson-case .radisson-journey__list li { min-height: 0; height: auto; padding: 18px 18px 18px 38px; align-items: center; justify-content: center; overflow-wrap: anywhere; hyphens: auto; }
+#radisson-case .radisson-journey__list li::before { top: 22px; left: 16px; }
+#radisson-case .radisson-journey__list--task li:nth-child(5) { grid-column: auto; }
+#radisson-case .radisson-journey__route svg { max-width: 100%; }
+@media (min-width: 901px) and (max-width: 1100px) {
+  #radisson-case .radisson-journey__list--task, #radisson-case .radisson-journey__list--solution { grid-template-columns: minmax(0, 1fr); }
+  #radisson-case .radisson-journey__list li { min-height: 0; }
+}
+@media (max-width: 900px) {
+  #radisson-case .radisson-journey__stage { grid-template-columns: minmax(0, 1fr); }
+  #radisson-case .radisson-journey__route svg { max-width: none; }
+}
+@media (max-width: 767px) {
+  #radisson-case .radisson-journey__list { grid-auto-rows: auto; }
+  #radisson-case .radisson-journey__list li { min-height: 0; padding: 18px 18px 18px 38px; }
+}
+
+/* Radisson results share the compact two-column Pivaldi layout. */
+#radisson-case .radisson-results-poster__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto; gap: 24px; }
+#radisson-case .radisson-results-poster .radisson-metric:nth-child(n) { display: grid !important; grid-column: auto; grid-row: auto; grid-template-columns: minmax(0, 1fr) minmax(100px, 0.42fr); align-items: center; gap: 22px; padding: 30px; min-height: 0 !important; height: auto; border: 0; border-radius: 24px; box-shadow: none; }
+#radisson-case .radisson-metric__copy { min-width: 0; }
+#radisson-case .radisson-results-poster .radisson-metric .metric-card__value { margin: 0 0 18px; font-size: clamp(44px, 4.5vw, 68px); }
+#radisson-case .radisson-results-poster .radisson-metric .metric-card__text { max-width: none; font-size: 17px; line-height: 1.4; margin: 0; overflow-wrap: anywhere; }
+#radisson-case .radisson-results-poster .radisson-metric .radisson-metric__art { position: static; inset: auto; display: block; width: 100%; max-width: 180px; height: auto; margin: 0; justify-self: end; overflow: hidden; transform: none; stroke-linecap: round; stroke-linejoin: round; }
+#radisson-case .radisson-results-poster .radisson-metric::after { content: none; }
+@media (max-width: 1000px) {
+  #radisson-case .radisson-results-poster .radisson-metric:nth-child(n) { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 24px; }
+  #radisson-case .radisson-results-poster .radisson-metric .radisson-metric__art { max-width: 130px; }
+}
+@media (max-width: 600px) {
+  #radisson-case .radisson-results-poster__grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+}
+
+#radisson-case .radisson-hero-poster__facts .radisson-hero-poster__fact strong { color: #178e4c; }
+
+/* Radisson: the same heading / visual / benefit-card composition as CDEK. */
+#radisson-case .radisson-change-layout { max-width: 1440px; margin: 0 auto; font-family: var(--font-display); }
+#radisson-case .radisson-change-heading { margin: 0 auto 44px; max-width: 100%; text-align: center; font-size: clamp(36px, 5vw, 72px); line-height: 1.04; letter-spacing: -.05em; color: #101116; }
+#radisson-case .radisson-change-heading > span { position: relative; isolation: isolate; display: inline-block; }
+#radisson-case .radisson-change-heading > span::before { content: ""; position: absolute; z-index: -1; inset: 15% -3% 0; background: #ffd95a; clip-path: polygon(2% 10%, 94% 0, 100% 22%, 97% 94%, 5% 100%, 0 76%); }
+#radisson-case .radisson-change-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); align-items: center; }
+#radisson-case .radisson-change-grid > * { min-width: 0; }
+#radisson-case .radisson-change-scene { display: block; width: 100%; height: auto; }
+#radisson-case .radisson-change-scene, #radisson-case .radisson-change-card svg { fill: none; stroke: #101116; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+#radisson-case .radisson-scene-label { fill: #101116; stroke: none; font: 17px sans-serif; }
+#radisson-case .radisson-change-logos { display: flex; justify-content: center; gap: 22px; margin: 0 auto 18px; }
+#radisson-case .radisson-change-logos img { position: static; display: block; width: 76px; height: 76px; object-fit: contain; padding: 8px; border-radius: 17px; background: #fff; }
+#radisson-case .radisson-change-caption { max-width: 390px; margin: 0 auto; text-align: center; font-size: 18px; line-height: 1.45; }
+#radisson-case .radisson-change-intro, #radisson-case .radisson-change-conclusion { margin: 0; color: #30333a; font-size: 18px; line-height: 1.5; }
+#radisson-case .radisson-change-cards { display: grid; gap: 14px; margin: 24px 0; }
+#radisson-case .radisson-change-card { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 20px; align-items: center; padding: 20px 24px; border-radius: 22px; }
+#radisson-case .radisson-change-card--0 { background: #ddf8e8; }
+#radisson-case .radisson-change-card--1 { background: #fff3c4; }
+#radisson-case .radisson-change-card--2 { background: #eaf1ff; }
+#radisson-case .radisson-change-card svg { position: static; width: 100%; height: auto; }
+#radisson-case .radisson-change-card h4 { margin: 0 0 7px; color: #101116; font-size: 24px; line-height: 1.15; letter-spacing: -.025em; }
+#radisson-case .radisson-change-card p { margin: 0; font-size: 17px; line-height: 1.45; color: #30333a; }
+@media (max-width: 900px) {
+  #radisson-case .radisson-change-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  #radisson-case .radisson-change-visual { width: min(100%, 550px); margin: auto; }
+}
+@media (max-width: 600px) {
+  #radisson-case .radisson-change-heading { font-size: clamp(28px, 7.5vw, 44px); margin-bottom: 28px; }
+  #radisson-case .radisson-change-card { grid-template-columns: 62px minmax(0, 1fr); gap: 14px; padding: 18px; }
+  #radisson-case .radisson-change-card h4 { font-size: 21px; }
+  #radisson-case .radisson-change-card p, #radisson-case .radisson-change-intro, #radisson-case .radisson-change-conclusion { font-size: 16px; }
+  #radisson-case .radisson-change-logos img { width: 64px; height: 64px; }
+}
+
+/* Partnership: heading and illustration share the left column. */
+#pivaldi-case .pivaldi-partnership__box { max-width: 1500px; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr) minmax(0, 1fr); align-items: center; gap: clamp(22px, 2.5vw, 36px); padding: 0; background: transparent; border: 0; box-shadow: none; }
+#pivaldi-case .pivaldi-partnership__visual { min-width: 0; width: 100%; max-width: none; justify-self: center; text-align: center; }
+#pivaldi-case .pivaldi-partnership__visual .case-story__title { font-size: clamp(30px, 2.8vw, 43px); line-height: 1.06; }
+#pivaldi-case .pivaldi-partnership__visual .case-story__title span { white-space: normal; }
+#pivaldi-case .pivaldi-partnership__eyebrow { font-size: 12px; letter-spacing: 0; margin-bottom: 22px; }
+#pivaldi-case .pivaldi-partnership__visual .pivaldi-partnership__art { display: block; width: 100%; max-width: 400px; height: auto; margin: 30px auto 0; }
+#pivaldi-case .pivaldi-partnership__copy { box-sizing: border-box; grid-column: auto; align-self: stretch; display: flex; align-items: center; width: 100%; max-width: none; padding: clamp(24px, 2.5vw, 36px); border-radius: 28px; background: #eae7ff; }
+#pivaldi-case .pivaldi-partnership__copy .case-story__lead { margin: 0; font-size: clamp(16px, 1.2vw, 18px); line-height: 1.5; }
+@media (max-width: 1050px) {
+  #pivaldi-case .pivaldi-partnership__box { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0; }
+  #pivaldi-case .pivaldi-partnership__visual { grid-column: 1 / -1; grid-row: 1; max-width: 500px; }
+}
+@media (max-width: 650px) {
+  #pivaldi-case .pivaldi-partnership__box { grid-template-columns: minmax(0, 1fr); padding: 0; }
+  #pivaldi-case .pivaldi-partnership__visual, #pivaldi-case .pivaldi-partnership__copy { justify-self: center; }
+  #pivaldi-case .pivaldi-partnership__visual .pivaldi-partnership__art { max-width: 340px; margin-top: 24px; }
 }
